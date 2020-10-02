@@ -19,6 +19,8 @@ export const theme = {
       bold: 800,
     },
   },
+  fontImport:
+    "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300;0,400;1,400;0,600;1,600;0,800;1,800&display=swap",
   fonts: {
     primary: "'Rubik', sans-serif",
   },
