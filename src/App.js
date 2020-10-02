@@ -48,6 +48,12 @@ export const App = () => (
           inventore enim explicabo vitae perspiciatis eveniet harum laboriosam
           porro. Repellendus, labore.
         </p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
       </TypeBlock>
     </Box>
   </RootFront>

@@ -18,5 +18,12 @@ export const TypeBlock = styled.div(
       lineHeight: "xl",
       mb: ["2rem"],
     },
+    ul: {
+      bg: "lightgray",
+      pl: "2rem",
+    },
+    li: {
+      lineHeight: "xl",
+    },
   })
 );
