@@ -16,7 +16,6 @@ export const RootBase = ({ children }) => (
       styles={scss({
         html: {
           fontFamily: "primary",
-          bg: "red",
           fontWeight: "primary.regular",
         },
       })}
