@@ -22,4 +22,10 @@ export const theme = {
   fonts: {
     primary: "'Rubik', sans-serif",
   },
+  lineHeights: {
+    sm: 1.1,
+    md: 1.4,
+    lg: 1.6,
+    xl: 2,
+  },
 };
