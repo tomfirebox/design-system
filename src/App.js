@@ -1,13 +1,8 @@
-import React from 'react';
+import React from "react";
+import { ButtonPrimary } from "./Components/";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Design System
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <div>
+    <ButtonPrimary>Hey there</ButtonPrimary>
+  </div>
+);
