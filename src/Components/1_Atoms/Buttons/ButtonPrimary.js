@@ -1,7 +1,7 @@
 import React from "react";
 import css from "@styled-system/css";
 import { useTheme } from "emotion-theming";
-import { darken, lighten } from "polished";
+import { darken } from "polished";
 import { Button } from "../../";
 
 export const ButtonPrimary = (props) => {
