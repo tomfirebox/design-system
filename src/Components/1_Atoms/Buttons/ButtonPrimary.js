@@ -1,6 +1,5 @@
-import styled from "@emotion/styled";
+import React from "react";
+import css from "@styled-system/css";
 import { Button } from "../../";
 
-export const ButtonPrimary = styled(Button)`
-  background: red;
-`;
+export const ButtonPrimary = (props) => <Button css={} {...props} />;
