@@ -7,5 +7,6 @@ export const Button = styled.button(
     background: "none",
     cursor: "pointer",
   },
-  layout
+  layout,
+  ({ css }) => css
 );
