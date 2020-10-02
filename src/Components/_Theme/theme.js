@@ -7,4 +7,8 @@ export const theme = {
       base: "#811A69",
     },
   },
+  radii: {
+    none: 0,
+    sm: "5px",
+  },
 };
