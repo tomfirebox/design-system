@@ -12,6 +12,7 @@ export const TypeBlock = styled.div(
     h2: {
       lineHeight: "md",
       fontSize: ["2rem"],
+      fontWeight: "primary.semibold",
       mb: ["1rem"],
       mt: ["2rem"],
     },
@@ -27,6 +28,7 @@ export const TypeBlock = styled.div(
       fontSize: "1.1rem",
     },
     ul: {
+      mb: "3rem",
       pl: "1.2rem",
       li: {
         "&:before": {
@@ -41,6 +43,7 @@ export const TypeBlock = styled.div(
       },
     },
     ol: {
+      mb: "3rem",
       pl: "2.4rem",
       counterReset: "custom-counter",
       li: {

@@ -11,7 +11,7 @@ export const App = () => (
   <RootFront>
     <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>
-    <Box maxWidth="800px" mx="auto">
+    <Box maxWidth="700px" mx="auto">
       <TypeBlock>
         <h1>Hey there</h1>
         <h2>Subtitle</h2>
@@ -22,15 +22,19 @@ export const App = () => (
           aliquid. Id, provident assumenda! Harum ipsa maiores quisquam adipisci
           nostrum minima ab alias ad magni obcaecati voluptatibus delectus
           debitis, vero, ipsum ea quam id perspiciatis error consectetur quae
-          voluptate. Debitis totam aut asperiores quis! Eveniet officia, maiores
-          ab modi dolore molestiae nulla quis minima dicta consequuntur. Ullam
-          laborum cupiditate recusandae quae aliquam obcaecati illum voluptatem
-          quis assumenda deserunt, sunt, ipsum accusamus, odio inventore vero!
-          Esse ullam debitis quisquam illo repellendus, recusandae vero eaque
-          amet eos non qui provident aliquam ipsam nisi voluptate asperiores
-          inventore enim explicabo vitae perspiciatis eveniet harum laboriosam
-          porro. Repellendus, labore.
+          voluptate. Debitis totam nisi voluptate asperiores inventore enim
+          explicabo vitae perspiciatis eveniet harum laboriosam porro.
+          Repellendus, labore.
         </p>
+        <p>
+          am aut asperiores quis! Eveniet officia, maiores ab modi dolore
+          molestiae nulla quis minima dicta consequuntur. Ullam laborum
+          cupiditate recusandae quae aliquam obcaecati illum voluptatem quis
+          assumenda deserunt, sunt, ipsum accusamus, odio inventore vero! Esse
+          ullam debitis quisquam illo repellendus, recusandae vero eaque amet
+          eos non qui provident aliquam ips
+        </p>
+        <h2>This is a subtitle</h2>
         <ol>
           <li>Lorem, ipsum.</li>
           <li>
@@ -50,6 +54,26 @@ export const App = () => (
           <li>Lorem ipsum dolor sit.</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
         </ol>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+          deserunt illo odio, tempore natus maxime ut explicabo perferendis
+          asperiores vero vitae architecto nesciunt modi doloremque cupiditate
+          quo dicta ullam suscipit! Blanditiis voluptatum eum numquam,
+          exercitationem placeat architecto doloribus ipsam? Cumque similique
+          accusantium expedita qui magni consequatur molestias suscipit ducimus
+          nemo, sit amet sequi rem dolores aliquid, sapiente ex aspernatur
+          praesentium? Id voluptate aliquid iure porro velit labore, autem
+          doloremque minus dolore eius earum saepe ratione laudantium provident
+          deleniti officiis alias sapiente ad molestiae reiciendis itaque quia.
+          Deserunt iste illum enim! Quidem nemo, ullam obcaecati praesentium
+          deserunt asperiores ex doloribus eveniet repellendus nulla, modi et
+          iusto porro dolore quos quo quam recusandae ducimus exercitationem
+          nisi enim veritatis fugit? Excepturi, quaerat voluptas? Sit
+          reprehenderit labore ratione, facilis optio quasi sed vel dolor cum
+          earum tempore beatae suscipit voluptates dolore quisquam pariatur
+          totam ipsam accusantium aliquam perferendis voluptatem aliquid ipsa?
+          Quod, incidunt dolor.
+        </p>
         <h2>Subtitle</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni optio
