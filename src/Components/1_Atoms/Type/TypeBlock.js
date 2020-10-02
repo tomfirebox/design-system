@@ -19,11 +19,21 @@ export const TypeBlock = styled.div(
       mb: ["2rem"],
     },
     ul: {
-      bg: "lightgray",
-      pl: "2rem",
-    },
-    li: {
-      lineHeight: "xl",
+      pl: "1.2rem",
+      li: {
+        mb: "1rem",
+        lineHeight: "xl",
+        position: "relative",
+        "&:before": {
+          content: "'\\2022'",
+          position: "absolute",
+          fontSize: "2rem",
+          left: "-1.2rem",
+          top: "-0.05rem",
+          lineHeight: 1,
+          color: "primary.base",
+        },
+      },
     },
   })
 );
