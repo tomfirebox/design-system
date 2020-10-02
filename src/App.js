@@ -31,6 +31,25 @@ export const App = () => (
           inventore enim explicabo vitae perspiciatis eveniet harum laboriosam
           porro. Repellendus, labore.
         </p>
+        <ol>
+          <li>Lorem, ipsum.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Vitae repudiandae molestias voluptates
+            voluptate numquam ducimus, blanditiis aspernatur laborum optio nulla
+            quis ullam exercitationem quisquam omnis ipsam, consequatur enim.
+            Labore, nulla! Possimus sed tempora officia deserunt ab alias quo
+            autem amet temporibus hic quae delectus fugiat optio aspernatur,
+            maxime laboriosam impedit non veritatis iste obcaecati assumenda
+            perferendis mollitia quisquam suscipit! Aspernatur. Quo, possimus
+            rem ab itaque hic dolor esse optio, eius tempore sunt, obcaecati
+            repellendus quas perspiciatis praesentium! Totam, rerum in maxime
+            obcaecati nulla a voluptatum pariatur ipsa molestias, necessitatibus
+            esse?
+          </li>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ol>
         <h2>Subtitle</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni optio
