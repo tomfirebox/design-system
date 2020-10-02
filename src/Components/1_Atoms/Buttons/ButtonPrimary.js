@@ -1,7 +1,7 @@
 import React from "react";
 import css from "@styled-system/css";
 import { useTheme } from "emotion-theming";
-import { darken } from "polished";
+import { darken, lighten } from "polished";
 import { Button } from "../../";
 
 export const ButtonPrimary = (props) => {
@@ -26,6 +26,9 @@ export const ButtonPrimary = (props) => {
         },
         ":focus": {
           border: `dotted 2px ${darken(-1, bgColor)}`,
+        },
+        ":disabled": {
+          opacity: 0.5,
         },
       })}
       {...props}

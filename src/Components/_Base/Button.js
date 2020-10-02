@@ -7,6 +7,9 @@ export const Button = styled.button(
     background: "none",
     cursor: "pointer",
     appearance: "none",
+    ":disabled": {
+      cursor: "not-allowed",
+    },
     ":focus": {
       outline: "none",
     },
