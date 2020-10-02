@@ -1,7 +1,6 @@
 import React from "react";
 import css from "@styled-system/css";
 import { Button } from "../../";
-import { minHeight } from "styled-system";
 
 export const ButtonPrimary = (props) => (
   <Button
@@ -12,6 +11,8 @@ export const ButtonPrimary = (props) => (
       py: "5px",
       minHeight: "44px",
       borderRadius: "sm",
+      fontSize: "1rem",
+      fontWeight: "primary.semibold",
     })}
     {...props}
   />

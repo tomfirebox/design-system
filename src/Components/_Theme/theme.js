@@ -11,4 +11,12 @@ export const theme = {
     none: 0,
     sm: "5px",
   },
+  fontWeights: {
+    primary: {
+      thin: 100,
+      regular: 400,
+      semibold: 600,
+      bold: 800
+    }
+  }
 };
