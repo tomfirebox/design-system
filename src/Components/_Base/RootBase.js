@@ -2,7 +2,7 @@ import React from "react";
 import { Global, css } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
 import { theme } from "../";
-import "normalize.css";
+import "reset-css";
 import { css as scss } from "@styled-system/css";
 
 export const RootBase = ({ children }) => (
