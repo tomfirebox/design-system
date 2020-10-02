@@ -1,25 +1,26 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
-import { ThemeProvider, useTheme } from "emotion-theming";
+import { ThemeProvider } from "emotion-theming";
 import { theme } from "../";
 import "normalize.css";
 import { css as scss } from "@styled-system/css";
 
-export const RootBase = ({ children }) => {
-  const { fontImport } = useTheme();
-  return (
-    <ThemeProvider theme={theme}>
-      <Global
-        styles={css`
-          @import url(${fontImport});
-        `}
-      />
-      <Global
-        styles={scss({
-          html: { fontFamily: "primary", fontWeight: "primary.bold" },
-        })}
-      />
-      {children}
-    </ThemeProvider>
-  );
-};
+export const RootBase = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <Global
+      styles={css`
+        @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap");
+      `}
+    />
+    <Global
+      styles={scss({
+        html: {
+          fontFamily: "primary",
+          bg: "red",
+          fontWeight: "primary.regular",
+        },
+      })}
+    />
+    {children}
+  </ThemeProvider>
+);
