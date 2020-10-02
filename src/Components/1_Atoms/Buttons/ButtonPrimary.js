@@ -20,12 +20,12 @@ export const ButtonPrimary = (props) => {
         fontSize: "1rem",
         fontWeight: "primary.semibold",
         transition: "background-color 0.2s ease, border 0.2s ease",
-        border: `solid 1px ${bgColor}`,
+        border: `solid 2px ${bgColor}`,
         ":hover": {
           bg: darken(0.05, bgColor),
         },
         ":focus": {
-          border: `solid 1px ${darken(1, bgColor)}`,
+          border: `dotted 2px ${darken(-1, bgColor)}`,
         },
       })}
       {...props}
