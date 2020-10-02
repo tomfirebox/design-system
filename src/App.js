@@ -1,8 +1,4 @@
 import React from "react";
-import { ButtonPrimary } from "./Components/";
+import { RootFront } from "./Components/";
 
-export const App = () => (
-  <div>
-    <ButtonPrimary>Hey there</ButtonPrimary>
-  </div>
-);
+export const App = () => <RootFront>Boo </RootFront>;
