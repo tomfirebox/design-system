@@ -6,6 +6,10 @@ export const Button = styled.button(
     border: "none",
     background: "none",
     cursor: "pointer",
+    appearance: "none",
+    ":focus": {
+      outline: "none",
+    },
   },
   layout,
   ({ css }) => css
