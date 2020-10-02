@@ -13,10 +13,13 @@ export const theme = {
   },
   fontWeights: {
     primary: {
-      thin: 100,
+      thin: 300,
       regular: 400,
       semibold: 600,
-      bold: 800
-    }
-  }
+      bold: 800,
+    },
+  },
+  fonts: {
+    primary: "'Rubik', sans-serif",
+  },
 };
