@@ -11,18 +11,20 @@ export const TypeBlock = styled.div(
     },
     h2: {
       lineHeight: "md",
-      fontSize: ["1.5rem"],
+      fontSize: ["2rem"],
       mb: ["1rem"],
       mt: ["2rem"],
     },
     p: {
       lineHeight: "xl",
       mb: ["2rem"],
+      fontSize: "1.1rem",
     },
     li: {
       mb: "1rem",
       lineHeight: "xl",
       position: "relative",
+      fontSize: "1.1rem",
     },
     ul: {
       pl: "1.2rem",
@@ -50,7 +52,7 @@ export const TypeBlock = styled.div(
           borderRadius: "100%",
           size: "1.7rem",
           left: "-2.4rem",
-          top: "0.2rem",
+          top: "0.25rem",
           lineHeight: 1,
           color: "white",
           display: "flex",
