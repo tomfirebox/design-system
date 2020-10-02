@@ -1,8 +1,8 @@
 import React from "react";
-import { useTheme } from "emotion-theming";
 import css from "@styled-system/css";
-import { Button } from "../../";
+import { useTheme } from "emotion-theming";
 import { darken } from "polished";
+import { Button } from "../../";
 
 export const ButtonPrimary = (props) => {
   const { colors } = useTheme();
