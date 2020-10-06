@@ -8,14 +8,21 @@ import {
   Text,
   Canon,
   Guide,
-  Container
+  Container,
+  Row,
+  Column,
 } from "./Components/";
 
 export const App = () => (
   <RootFront>
     <Guide />
-    <Container bg="red">
-      Hello
+    <Container bg="primary.base" color="white">
+      Before
+      <Row>
+        <Column>1</Column>
+        <Column>2</Column>
+      </Row>
+      After
     </Container>
     {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>

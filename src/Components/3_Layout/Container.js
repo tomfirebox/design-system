@@ -10,6 +10,7 @@ export const Container = forwardRef(({ children, maxWidth, ...props }, ref) => {
       maxWidth={{ ...containerPoints, ...maxWidth }}
       width="100%"
       mx="auto"
+      px="1rem"
       {...props}
     >
       {children}
