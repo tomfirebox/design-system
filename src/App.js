@@ -78,7 +78,6 @@ export const App = () => (
           <li>Lorem ipsum dolor sit.</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
         </ol>
-        <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
           deserunt illo odio, tempore natus maxime ut explicabo perferendis
           asperiores vero vitae architecto nesciunt modi doloremque cupiditate
@@ -97,7 +96,6 @@ export const App = () => (
           earum tempore beatae suscipit voluptates dolore quisquam pariatur
           totam ipsam accusantium aliquam perferendis voluptatem aliquid ipsa?
           Quod, incidunt dolor.
-        </p>
         <h2>Subtitle</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni optio
