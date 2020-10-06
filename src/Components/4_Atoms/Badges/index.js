@@ -1,0 +1,1 @@
+export { BadgePrimary } from "./BadgePrimary";

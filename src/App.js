@@ -11,16 +11,23 @@ import {
   Container,
   Row,
   Column,
+  BadgePrimary,
 } from "./Components/";
 
 export const App = () => (
   <RootFront>
     <Guide />
-    <Container bg="primary.base" color="white">
+    <Container>
       Before
       <Row>
-        <Column>1</Column>
-        <Column>2</Column>
+        <Column>
+          <BadgePrimary>Badge Primary</BadgePrimary> is on the same line
+        </Column>
+        <Column>
+          <Canon>
+            <BadgePrimary>Badge Primary</BadgePrimary> is on the same line
+          </Canon>
+        </Column>
       </Row>
       After
     </Container>
