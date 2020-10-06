@@ -3,6 +3,8 @@ import css from "@styled-system/css";
 
 export const TypeBlock = styled.div(
   css({
+    lineHeight: "xl",
+    fontSize: "1.1rem",
     h1: {
       lineHeight: "md",
       fontSize: ["3rem", "4rem"],
@@ -17,15 +19,11 @@ export const TypeBlock = styled.div(
       mt: ["2rem"],
     },
     p: {
-      lineHeight: "xl",
       mb: ["2rem"],
-      fontSize: "1.1rem",
     },
     li: {
       mb: "1rem",
-      lineHeight: "xl",
       position: "relative",
-      fontSize: "1.1rem",
     },
     ul: {
       mb: "3rem",

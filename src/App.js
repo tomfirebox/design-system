@@ -25,13 +25,14 @@ export const App = () => (
         </Column>
         <Column>
           <Canon>
-            <BadgePrimary>Badge Primary</BadgePrimary> is on the same line
+            <BadgePrimary bg="secondary.base">Badge Primary</BadgePrimary> is on
+            the same line
           </Canon>
         </Column>
       </Row>
       After
     </Container>
-    {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
+    <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>
     <Box maxWidth="700px" mx="auto">
       <Canon mb="2rem">Heading</Canon>
@@ -128,7 +129,23 @@ export const App = () => (
           <li>Lorem ipsum dolor sit amet.</li>
           <li>Lorem ipsum dolor sit amet.</li>
         </ul>
+        <h2>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Sapiente adipisci quod itaque repudiandae est
+              officiis minima aspernatur deserunt quo vel? Quis, magnam? Vitae
+              vero voluptatum vel fugiat harum odio rerum.Expedita totam tempora
+              at reiciendis deserunt? Ipsum autem consectetur aut iure sequi
+              quod molestiae modi provident fuga pariatur adipisci rem quaerat
+              culpa ad expedita, nemo vero ullam maxime, quidem magnam.
+            </li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+          </ul>
+        </h2>
       </TypeBlock>
-    </Box> */}
+    </Box>
   </RootFront>
 );
