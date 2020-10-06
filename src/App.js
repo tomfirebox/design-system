@@ -5,13 +5,22 @@ import {
   RootFront,
   TypeBlock,
   Box,
+  Text,
+  Canon,
+  Guide,
+  Container
 } from "./Components/";
 
 export const App = () => (
   <RootFront>
-    <ButtonPrimary disabled>Hello there</ButtonPrimary>
+    <Guide />
+    <Container bg="red">
+      Hello
+    </Container>
+    {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>
     <Box maxWidth="700px" mx="auto">
+      <Canon mb="2rem">Heading</Canon>
       <TypeBlock>
         <h1>Hey there</h1>
         <h2>Subtitle</h2>
@@ -106,6 +115,6 @@ export const App = () => (
           <li>Lorem ipsum dolor sit amet.</li>
         </ul>
       </TypeBlock>
-    </Box>
+    </Box> */}
   </RootFront>
 );

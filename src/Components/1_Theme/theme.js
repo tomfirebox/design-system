@@ -1,4 +1,8 @@
+import { breakpoints, containerPoints } from "./breakpoints";
+
 export const theme = {
+  breakpoints,
+  containerPoints,
   colors: {
     primary: {
       base: "#5B60F2",
