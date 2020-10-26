@@ -5,7 +5,6 @@ import {
   RootFront,
   TypeBlock,
   Box,
-  Text,
   Canon,
   Guide,
   Container,
