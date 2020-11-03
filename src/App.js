@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ButtonPrimary,
   Button,
@@ -14,9 +14,23 @@ import {
   FormSelectPrimary,
 } from "./Components/";
 
-export const App = () => (
+export const App = () => {
+  const [options, setOptions] = useState([
+    { label: <div>test could be <strong>me</strong></div>, selected: false, value: "test value" }, 
+    { label: <BadgePrimary>Badge Primary</BadgePrimary>, selected: false, value:"AHEY value" }
+    ])
+
+    const sortAZValue = (a,b)=>a.value > b.value ? -1 : 1;
+    const sortRecentlyUpdated = (a,b) => a.time - b.time;
+
+  return (
   <RootFront>
-    <FormSelectPrimary options={[{ label: "test" }, { label: "Hey" }]} />
+    <FormSelectPrimary 
+      optionSelected={(option) => setOptions(prev => {
+        return prev.map(item => item === option ? {...option, time: new Date(), selected: !option.selected} : item)
+      })} 
+      sortSelectedFunction={sortRecentlyUpdated}
+      options={options} />
     <Guide />
     <Container>
       Before
@@ -27,7 +41,7 @@ export const App = () => (
         <Column>
           <Canon>
             <BadgePrimary bg="secondary.base">Badge Primary</BadgePrimary> is on
-            the same line
+            the same line!
           </Canon>
         </Column>
       </Row>
@@ -146,4 +160,4 @@ export const App = () => (
       </TypeBlock>
     </Box>
   </RootFront>
-);
+);}

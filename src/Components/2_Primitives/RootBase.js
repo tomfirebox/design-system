@@ -14,6 +14,9 @@ export const RootBase = ({ children }) => (
     />
     <Global
       styles={scss({
+        strong: {
+          fontWeight: "primary.semibold"
+        },
         html: {
           fontFamily: "primary",
           fontWeight: "primary.regular",
