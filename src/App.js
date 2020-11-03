@@ -11,10 +11,12 @@ import {
   Row,
   Column,
   BadgePrimary,
+  FormSelectPrimary,
 } from "./Components/";
 
 export const App = () => (
   <RootFront>
+    <FormSelectPrimary options={[{ label: "test" }, { label: "Hey" }]} />
     <Guide />
     <Container>
       Before
@@ -37,7 +39,7 @@ export const App = () => (
       <Canon mb="2rem">Heading</Canon>
       <TypeBlock>
         <h1>Hey there</h1>
-        <h2>Subtitle</h2>
+        <h2>Subtitle is completely instant!</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni optio
           adipisci odit ipsum. Vero dignissimos nemo, iure consequuntur
@@ -77,24 +79,23 @@ export const App = () => (
           <li>Lorem ipsum dolor sit.</li>
           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
         </ol>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
-          deserunt illo odio, tempore natus maxime ut explicabo perferendis
-          asperiores vero vitae architecto nesciunt modi doloremque cupiditate
-          quo dicta ullam suscipit! Blanditiis voluptatum eum numquam,
-          exercitationem placeat architecto doloribus ipsam? Cumque similique
-          accusantium expedita qui magni consequatur molestias suscipit ducimus
-          nemo, sit amet sequi rem dolores aliquid, sapiente ex aspernatur
-          praesentium? Id voluptate aliquid iure porro velit labore, autem
-          doloremque minus dolore eius earum saepe ratione laudantium provident
-          deleniti officiis alias sapiente ad molestiae reiciendis itaque quia.
-          Deserunt iste illum enim! Quidem nemo, ullam obcaecati praesentium
-          deserunt asperiores ex doloribus eveniet repellendus nulla, modi et
-          iusto porro dolore quos quo quam recusandae ducimus exercitationem
-          nisi enim veritatis fugit? Excepturi, quaerat voluptas? Sit
-          reprehenderit labore ratione, facilis optio quasi sed vel dolor cum
-          earum tempore beatae suscipit voluptates dolore quisquam pariatur
-          totam ipsam accusantium aliquam perferendis voluptatem aliquid ipsa?
-          Quod, incidunt dolor.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        deserunt illo odio, tempore natus maxime ut explicabo perferendis
+        asperiores vero vitae architecto nesciunt modi doloremque cupiditate quo
+        dicta ullam suscipit! Blanditiis voluptatum eum numquam, exercitationem
+        placeat architecto doloribus ipsam? Cumque similique accusantium
+        expedita qui magni consequatur molestias suscipit ducimus nemo, sit amet
+        sequi rem dolores aliquid, sapiente ex aspernatur praesentium? Id
+        voluptate aliquid iure porro velit labore, autem doloremque minus dolore
+        eius earum saepe ratione laudantium provident deleniti officiis alias
+        sapiente ad molestiae reiciendis itaque quia. Deserunt iste illum enim!
+        Quidem nemo, ullam obcaecati praesentium deserunt asperiores ex
+        doloribus eveniet repellendus nulla, modi et iusto porro dolore quos quo
+        quam recusandae ducimus exercitationem nisi enim veritatis fugit?
+        Excepturi, quaerat voluptas? Sit reprehenderit labore ratione, facilis
+        optio quasi sed vel dolor cum earum tempore beatae suscipit voluptates
+        dolore quisquam pariatur totam ipsam accusantium aliquam perferendis
+        voluptatem aliquid ipsa? Quod, incidunt dolor.
         <h2>Subtitle</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni optio
