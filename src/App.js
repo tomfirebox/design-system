@@ -25,15 +25,15 @@ export const App = () => {
 
   return (
   <RootFront>
+    {/* <Guide /> */}
+    <Container>
     <FormSelectPrimary 
       optionSelected={(option) => setOptions(prev => {
         return prev.map(item => item === option ? {...option, time: new Date(), selected: !option.selected} : item)
       })} 
       sortSelectedFunction={sortRecentlyUpdated}
       options={options} />
-    <Guide />
-    <Container>
-      Before
+      {/* Before
       <Row>
         <Column>
           <BadgePrimary>Badge Primary</BadgePrimary> is on the same line
@@ -45,9 +45,9 @@ export const App = () => {
           </Canon>
         </Column>
       </Row>
-      After
+      After */}
     </Container>
-    <ButtonPrimary disabled>Hello there</ButtonPrimary>
+    {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>
     <Box maxWidth="700px" mx="auto">
       <Canon mb="2rem">Heading</Canon>
@@ -158,6 +158,6 @@ export const App = () => {
           </ul>
         </h2>
       </TypeBlock>
-    </Box>
+    </Box> */}
   </RootFront>
 );}

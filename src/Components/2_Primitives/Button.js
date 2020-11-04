@@ -1,5 +1,19 @@
 import styled from "@emotion/styled";
-import { layout } from "styled-system";
+import {
+  color,
+  space,
+  layout,
+  flexbox,
+  alignItems,
+  position,
+  border,
+  typography,
+  background,
+  justifyContent,
+  shadow,
+  compose,
+  system,
+} from "styled-system";
 
 export const Button = styled.button(
   {
@@ -13,7 +27,21 @@ export const Button = styled.button(
     ":focus": {
       outline: "none",
     },
+    fontSize: "inherit",
+    fontFamily: "inherit"
   },
-  layout,
+  compose(
+    color,
+    space,
+    layout,
+    flexbox,
+    alignItems,
+    justifyContent,
+    typography,
+    border,
+    background,
+    shadow,
+    position
+  ),
   ({ css }) => css
 );

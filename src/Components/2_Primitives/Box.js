@@ -34,6 +34,7 @@ export const Box = styled.div(
     textTransform: true,
     textDecoration: true,
     boxDecorationBreak: true,
+    visibility: true
   }),
   ({ css }) => css
 );
