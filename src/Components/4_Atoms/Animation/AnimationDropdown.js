@@ -13,11 +13,11 @@ export const AnimationDropdown = ({ children, collapsed = true, ...props }) => {
   useEffect(() => {
     tween.to(container, { opacity: 1 });
     collapseTween.to(list, { autoAlpha: 1, y: 0, duration: 0.2 }).reverse();
-  }, []);
+  }, [tween, collapseTween]);
 
   useEffect(() => {
     collapseTween.reversed(collapsed);
-  }, [collapsed]);
+  }, [collapsed, collapseTween]);
 
   return (
     <Box opacity={0} ref={(e) => (container = e)} {...props}>

@@ -12,7 +12,6 @@ import {
   justifyContent,
   shadow,
   compose,
-  system,
 } from "styled-system";
 
 export const Button = styled.button(
