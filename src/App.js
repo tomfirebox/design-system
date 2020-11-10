@@ -28,6 +28,7 @@ export const App = () => {
     },
     {
       label: <BadgePrimary>Badge Primary</BadgePrimary>,
+      listLabel: <Box bg='red'></Box>,
       selected: false,
       value: "AHEY value",
     },

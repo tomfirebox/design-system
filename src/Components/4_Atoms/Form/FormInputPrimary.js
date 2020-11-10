@@ -6,7 +6,7 @@ export const FormInputPrimary = ({ css, ...props }) => (
   <Button
     width="100%"
     border="solid 1px lightgray"
-    borderRadius="0rem"
+    borderRadius="0.3rem"
     px="1rem"
     py="0.2rem"
     height="40px"
@@ -16,7 +16,7 @@ export const FormInputPrimary = ({ css, ...props }) => (
     as="input"
     bg="white"
     fontSize="1rem"
-    css={[icss({ cursor: "text" }), css]}
+    css={[icss({ cursor: "text", ':focus': { border: 'solid 1px', borderColor: 'primary.base'} }), css]}
     {...props}
   />
 );

@@ -14,12 +14,16 @@ export const RootBase = ({ children }) => (
     />
     <Global
       styles={scss({
+        "*":{
+          color: "inherit"
+        },
         strong: {
           fontWeight: "primary.semibold"
         },
         html: {
           fontFamily: "primary",
           fontWeight: "primary.regular",
+          color:"primary.19"
         },
       })}
     />

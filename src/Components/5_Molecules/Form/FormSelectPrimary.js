@@ -27,7 +27,7 @@ export const FormSelectPrimary = ({
           ? emptyLabel
           : selected.map((s, i, arr) => {
               return (
-                <Box key={s.value} display="flex" mr="0.4rem">
+                <Box key={s.value} display="flex" mr="0.4rem" alignItems='center'>
                   {s.label}
                   {i < arr.length - 1 && ","}
                 </Box>
@@ -35,7 +35,7 @@ export const FormSelectPrimary = ({
             })}
       </DropdownButton>
       <Dropdown>
-        {options.map((option) => (
+        {options.map((option, i, arr) => (
           <DropdownListItem
             key={option.value}
             onClick={() => {
@@ -43,6 +43,7 @@ export const FormSelectPrimary = ({
               optionSelected(option);
             }}
             selected={option.selected}
+            last={i === arr.length - 1}
           >
             {option.label}
           </DropdownListItem>
@@ -58,24 +59,23 @@ const DropdownButton = (props) => (
     css={css({
       cursor: "pointer",
       transition: "background-color ease 0.2s",
-      ":hover": { bg: "red" },
+      ":hover": { bg: "primary.4" },
     })}
     {...props}
   />
 );
 
-const Dropdown = (props) => <Box bg="primary.base" {...props} />;
+const Dropdown = (props) => <Box border="solid 1px lightgray" overflow='hidden' borderRadius='0.3rem' boxShadow='md' mt='0.3rem' {...props} />;
 
-const DropdownListItem = ({ selected, ...props }) => (
+const DropdownListItem = ({ selected, last, ...props }) => (
   <Button
     textAlign="left"
     width="100%"
-    border="solid 1px lightgray"
     px="1rem"
-    py="0.5rem"
-    borderBottom="transparent"
-    bg={selected ? "green" : "white"}
-    css={css({ ":hover": { bg: "gray" } })}
+    py="0.2rem"
+    height='40px'
+    borderBottom={!last && "solid 1px lightgray"}
+    css={css({ ":hover": { bg: "primary.4" } })}
     {...props}
   />
 );
