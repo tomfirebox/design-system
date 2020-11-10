@@ -16,6 +16,7 @@ import {
 
 export const Button = styled.button(
   {
+    boxSizing: "border-box",
     border: "none",
     background: "none",
     cursor: "pointer",
@@ -27,7 +28,7 @@ export const Button = styled.button(
       outline: "none",
     },
     fontSize: "inherit",
-    fontFamily: "inherit"
+    fontFamily: "inherit",
   },
   compose(
     color,

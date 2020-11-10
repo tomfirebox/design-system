@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, AnimationDropdown } from "../../";
 import css from "@styled-system/css";
+import { FormInputPrimary } from "../../4_Atoms";
 
 export const FormSelectPrimary = ({
   options,
@@ -18,6 +19,7 @@ export const FormSelectPrimary = ({
     <AnimationDropdown
       collapsed={collapsed}
       setCollapsed={setCollapsed}
+      onMouseLeave={() => setCollapsed(true)}
       {...props}
     >
       <DropdownButton onClick={() => setCollapsed(!collapsed)}>
@@ -51,22 +53,18 @@ export const FormSelectPrimary = ({
 };
 
 const DropdownButton = (props) => (
-  <Button
-    width="100%"
-    border="solid 1px lightgray"
-    borderRadius="0.2rem"
-    px="1rem"
-    py="0.5rem"
-    display="flex"
+  <FormInputPrimary
+    as="button"
     css={css({
+      cursor: "pointer",
       transition: "background-color ease 0.2s",
-      ":hover": { bg: "salmon" },
+      ":hover": { bg: "red" },
     })}
     {...props}
   />
 );
 
-const Dropdown = (props) => <Box {...props} />;
+const Dropdown = (props) => <Box bg="primary.base" {...props} />;
 
 const DropdownListItem = ({ selected, ...props }) => (
   <Button

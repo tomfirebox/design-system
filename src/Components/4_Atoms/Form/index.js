@@ -1,1 +1,1 @@
-export { FormSelectPrimary } from "./FormSelectPrimary";
+export { FormInputPrimary } from './FormInputPrimary'

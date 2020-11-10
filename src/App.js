@@ -12,28 +12,49 @@ import {
   Column,
   BadgePrimary,
   FormSelectPrimary,
+  FormInputPrimary,
 } from "./Components/";
 
 export const App = () => {
   const [options, setOptions] = useState([
-    { label: <div>test could be <strong>me</strong></div>, selected: false, value: "test value" }, 
-    { label: <BadgePrimary>Badge Primary</BadgePrimary>, selected: false, value:"AHEY value" }
-    ])
+    {
+      label: (
+        <div>
+          test could be <strong>me</strong>
+        </div>
+      ),
+      selected: false,
+      value: "test value",
+    },
+    {
+      label: <BadgePrimary>Badge Primary</BadgePrimary>,
+      selected: false,
+      value: "AHEY value",
+    },
+  ]);
 
-    const sortAZValue = (a,b)=>a.value > b.value ? -1 : 1;
-    const sortRecentlyUpdated = (a,b) => a.time - b.time;
+  const sortAZValue = (a, b) => (a.value > b.value ? -1 : 1);
+  const sortRecentlyUpdated = (a, b) => a.time - b.time;
 
   return (
-  <RootFront>
-    {/* <Guide /> */}
-    <Container>
-    <FormSelectPrimary 
-      optionSelected={(option) => setOptions(prev => {
-        return prev.map(item => item === option ? {...option, time: new Date(), selected: !option.selected} : item)
-      })} 
-      sortSelectedFunction={sortRecentlyUpdated}
-      options={options} />
-      {/* Before
+    <RootFront>
+      {/* <Guide /> */}
+      <Container py="3rem">
+        <FormInputPrimary placeholder="This is the placeholder" mb="1rem" />
+        <FormSelectPrimary
+          optionSelected={(option) =>
+            setOptions((prev) => {
+              return prev.map((item) =>
+                item === option
+                  ? { ...option, time: new Date(), selected: !option.selected }
+                  : item
+              );
+            })
+          }
+          sortSelectedFunction={sortRecentlyUpdated}
+          options={options}
+        />
+        {/* Before
       <Row>
         <Column>
           <BadgePrimary>Badge Primary</BadgePrimary> is on the same line
@@ -46,8 +67,8 @@ export const App = () => {
         </Column>
       </Row>
       After */}
-    </Container>
-    {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
+      </Container>
+      {/* <ButtonPrimary disabled>Hello there</ButtonPrimary>
     <Button disabled>Another</Button>
     <Box maxWidth="700px" mx="auto">
       <Canon mb="2rem">Heading</Canon>
@@ -159,5 +180,6 @@ export const App = () => {
         </h2>
       </TypeBlock>
     </Box> */}
-  </RootFront>
-);}
+    </RootFront>
+  );
+};
