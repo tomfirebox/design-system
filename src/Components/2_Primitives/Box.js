@@ -13,6 +13,7 @@ import {
   shadow,
   compose,
   system,
+  zIndex
 } from "styled-system";
 
 export const Box = styled.div(
@@ -28,7 +29,8 @@ export const Box = styled.div(
     border,
     background,
     shadow,
-    position
+    position,
+    zIndex
   ),
   system({
     textTransform: true,

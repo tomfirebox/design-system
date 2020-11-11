@@ -3,17 +3,36 @@ import {
   Box,
   Button,
   AnimationDropdown,
-  AnimationItemsInOut,
-  Container,
   FormInputPrimary,
 } from "../../";
 import css from "@styled-system/css";
 import { motion, AnimatePresence } from "framer-motion";
 
+const container = {
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0.1,
+    transition: { duration: 0.2 }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, y: 10, scale: 0.3},
+  show: { opacity: 1, y: 0, scale: 1 },
+}
+
 export const FormSelectPrimary = ({
   options,
   sortSelectedFunction,
-  optionSelected = () => {},
+  optionClicked = () => {},
+  tokenClicked = () => {},
   emptyLabel = "Please select",
   ...props
 }) => {
@@ -21,65 +40,9 @@ export const FormSelectPrimary = ({
   const selected = [
     ...options.filter((s) => s.selected).sort(sortSelectedFunction),
   ];
-  const [notifications, setNotifications] = useState([0]);
-
-  const remove = (arr, item) => {
-    const newArr = [...arr];
-    newArr.splice(
-      newArr.findIndex((i) => i === item),
-      1
-    );
-    console.log("yehh");
-    return newArr;
-  };
-
-  const [index, setIndex] = useState(0);
-
-  const add = (arr) => {
-    setIndex(index + 1);
-    return [...arr, index + 1];
-  };
 
   return (
-    // <div>
-    //   <ul style={{display:'flex', flexDirection:'column-reverse'}}>
-    //     <AnimatePresence initial={false}>
-    //       {notifications.map((id) => (
-    //         <motion.li
-    //           key={id}
-    //           layout
-    //           initial={{
-    //             opacity: 0,
-    //             y: 0,
-    //             scale: 0.3,
-    //           }}
-    //           animate={{
-    //             opacity: 1,
-    //             y: 0,
-    //             scale: 1,
-    //           }}
-    //           exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
 
-    //         >
-    //           <Box bg="red">
-    //             <button
-    //               onClick={() => setNotifications(remove(notifications, id))}
-    //             >
-    //               {JSON.stringify(id)}
-    //               Close
-    //             </button>
-    //           </Box>
-    //         </motion.li>
-    //       ))}
-    //     </AnimatePresence>
-    //   </ul>
-    //   <button
-    //     className="add"
-    //     onClick={() => setNotifications(add(notifications))}
-    //   >
-    //     +
-    //   </button>
-    // </div>
     <AnimationDropdown
       collapsed={collapsed}
       setCollapsed={setCollapsed}
@@ -87,34 +50,31 @@ export const FormSelectPrimary = ({
       {...props}
     >
       <DropdownButton onClick={() => setCollapsed(!collapsed)}>
+
         <motion.div
           animate={{
             opacity: selected.length ? 0 : 1,
             position: selected.length ? 'absolute' : "relative",
-            // scale: selected.length ? 0.2 : 1,
           }}
         >
           {emptyLabel}
         </motion.div>
-        {/* {!selected[0] ? (
-          emptyLabel
-        ) : (
-        )} */}
+       
         <ul style={{ display: "flex", alignItems: "center", position: selected.length ? 'relative' : 'absolute' }}>
-          <AnimatePresence initial={false}>
+            <motion.div style={{ display: "flex"}}   initial="hidden"
+                    animate="show"
+                    exit="hidden" variants={container}
+   >
+                <AnimatePresence initial={true} >
             {selected.length &&
               selected.map((s, i, arr) => {
                 return (
                   <motion.li
                     key={s.value}
                     layout
-                    initial={{ opacity: 0, y: 0, scale: 0.3 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.1,
-                      transition: { duration: 0.2 },
-                    }}
+                    variants={item}
+                    onClick={(e) => {e.stopPropagation(); tokenClicked(s)}}
+                   
                   >
                     <Box
                       key={s.value}
@@ -123,12 +83,12 @@ export const FormSelectPrimary = ({
                       alignItems="center"
                     >
                       {s.label}
-                      {/* {i < arr.length - 1 && ","} */}
                     </Box>
                   </motion.li>
                 );
               })}
           </AnimatePresence>
+              </motion.div>
         </ul>
       </DropdownButton>
       <Dropdown>
@@ -136,8 +96,9 @@ export const FormSelectPrimary = ({
           <DropdownListItem
             key={option.value}
             onClick={() => {
+              console.log(option)
               setCollapsed(true);
-              optionSelected(option);
+              optionClicked(option);
             }}
             selected={option.selected}
             last={i === arr.length - 1}
@@ -181,7 +142,7 @@ const DropdownListItem = ({ selected, last, ...props }) => (
     py="0.2rem"
     height="40px"
     borderBottom={!last && "solid 1px lightgray"}
-    css={css({ ":hover": { bg: "primary.4" } })}
+    css={css({ ":hover, :focus": { bg: "primary.4" } })}
     {...props}
   />
 );

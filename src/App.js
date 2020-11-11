@@ -26,35 +26,42 @@ export const App = () => {
     },
     {
       label: <BadgePrimary>Badge Primary 2</BadgePrimary>,
-      selected: false,
+      selected: true,
       value: "test value2",
     },
     {
       label: <BadgePrimary>Badge Primary 3</BadgePrimary>,
       listLabel: <Box bg="red"></Box>,
-      selected: false,
+      selected: true,
       value: "AHEY value",
     },
   ]);
 
   const sortAZValue = (a, b) => (a.value > b.value ? -1 : 1);
-  const sortRecentlyUpdated = (a, b) => a.time - b.time;
+  const sortRecentlyUpdated = (a, b) => { 
+    const x = a.time || 0;
+    const y = b.time || 0;
+    return x - y
+  };
 
+  const toggleOption = (option) => {
+    setOptions((prev) => {
+      return prev.map((item) =>
+        item === option
+          ? { ...option, time: new Date(), selected: !option.selected }
+          : item
+      );
+    })
+  }
   return (
     <RootFront>
       <Container py="3rem">
         <FormSelectPrimary
-          optionSelected={(option) =>
-            setOptions((prev) => {
-              return prev.map((item) =>
-                item === option
-                  ? { ...option, time: new Date(), selected: !option.selected }
-                  : item
-              );
-            })
-          }
+          optionClicked={toggleOption}
+          tokenClicked={toggleOption}
           sortSelectedFunction={sortRecentlyUpdated}
           options={options}
+          mb='8rem'
         />
         <FormDropdown />
         <FormInputPrimary placeholder="This is the placeholder" mb="1rem" />
