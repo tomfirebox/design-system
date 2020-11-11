@@ -10,11 +10,13 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "emotion-theming": "^10.0.27",
+    "framer-motion": "^2.9.4",
     "gsap": "^3.5.1",
     "polished": "^3.6.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "react-spring": "^8.0.27",
     "reset-css": "^5.0.1",
     "styled-system": "^5.1.5"
   },
