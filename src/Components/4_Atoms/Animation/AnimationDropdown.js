@@ -13,8 +13,8 @@ export const AnimationDropdown = ({ children, collapsed = true, ...props }) =>
         <motion.div  
           key="dropdown"
           initial={{ opacity: 0, y: 5,  }}
-          animate={{ opacity: 1, y: 0, transition: { ease: "easeInOut", duration: 0.1 } }}
-          exit={{ opacity: 0, y: 5 , transition: { duration: 0.2 }}}
+          animate={{ opacity: 1, y: 0, transition: { ease: "easeOut", duration: 0.2 } }}
+          exit={{ opacity: 0, y: 5 , transition: { ease: "easeOut", duration: 0.2 }}}
         >
           {children[1]}
         </motion.div>}

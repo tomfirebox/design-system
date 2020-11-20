@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 import {
-  ButtonPrimary,
-  Button,
-  TypeBlock,
   Box,
-  Canon,
-  Guide,
   Container,
-  Row,
-  Column,
   BadgePrimary,
   FormSelectPrimary,
   FormInputPrimary,
-  FormDropdown,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -20,12 +12,12 @@ import { RootFront } from "./Components/2_Primitives/RootFront";
 export const App = () => {
   const [options, setOptions] = useState([
     {
-      label: <BadgePrimary>Badge Primary 1</BadgePrimary>,
+      label: <BadgePrimary>Badge Primary 1 - this is something</BadgePrimary>,
       selected: false,
       value: "test value",
     },
     {
-      label: <BadgePrimary>Badge Primary 2</BadgePrimary>,
+      label: <BadgePrimary>Badge Primary 2 - this is something</BadgePrimary>,
       selected: true,
       value: "test value2",
     },
@@ -63,7 +55,6 @@ export const App = () => {
           options={options}
           mb='8rem'
         />
-        <FormDropdown />
         <FormInputPrimary placeholder="This is the placeholder" mb="1rem" />
       </Container>
     </RootFront>

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  AnimationDropdown,
-  FormInputPrimary,
-} from "../../";
+import { Box, Button, AnimationDropdown, FormInputPrimary, AnimationItemsInOut } from "../../";
 import css from "@styled-system/css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,20 +8,20 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      staggerChildren: 0.2
-    }
+      staggerChildren: 0.2,
+    },
   },
   hidden: {
     opacity: 0,
     scale: 0.1,
-    transition: { duration: 0.2 }
-  }
-}
+    transition: { duration: 0.2 },
+  },
+};
 
 const item = {
-  hidden: { opacity: 0, y: 10, scale: 0.3},
+  hidden: { opacity: 0, y: 10, scale: 0.3 },
   show: { opacity: 1, y: 0, scale: 1 },
-}
+};
 
 export const FormSelectPrimary = ({
   options,
@@ -42,7 +37,6 @@ export const FormSelectPrimary = ({
   ];
 
   return (
-
     <AnimationDropdown
       collapsed={collapsed}
       setCollapsed={setCollapsed}
@@ -50,45 +44,70 @@ export const FormSelectPrimary = ({
       {...props}
     >
       <DropdownButton onClick={() => setCollapsed(!collapsed)}>
-
         <motion.div
           animate={{
             opacity: selected.length ? 0 : 1,
-            position: selected.length ? 'absolute' : "relative",
+            position: selected.length ? "absolute" : "relative",
           }}
         >
           {emptyLabel}
         </motion.div>
-       
-        <ul style={{ display: "flex", alignItems: "center", position: selected.length ? 'relative' : 'absolute' }}>
-            <motion.div style={{ display: "flex"}}   initial="hidden"
-                    animate="show"
-                    exit="hidden" variants={container}
-   >
-                <AnimatePresence initial={true} >
-            {selected.length &&
-              selected.map((s, i, arr) => {
-                return (
-                  <motion.li
-                    key={s.value}
-                    layout
-                    variants={item}
-                    onClick={(e) => {e.stopPropagation(); tokenClicked(s)}}
+
+        <ul
+          style={{
+            display: "flex",
+            alignItems: "center",
+            position: selected.length ? "relative" : "absolute",
+          }}
+        >
+          {/* <AnimationItemsInOut>
+          {selected.length &&
+                selected.map((s, i, arr) => {
+                  return (
                    
-                  >
-                    <Box
+                      <Box
+                        display="flex"
+                        mr="0.4rem"
+                        alignItems="center"
+                      >
+                        {s.label}
+                      </Box>
+                  );
+                })}
+          </AnimationItemsInOut> */}
+          <motion.div
+            style={{ display: "flex" }}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            variants={container}
+          >
+            <AnimatePresence initial={true}>
+              {selected.length &&
+                selected.map((s, i, arr) => {
+                  return (
+                    <motion.li
                       key={s.value}
-                      display="flex"
-                      mr="0.4rem"
-                      alignItems="center"
+                      layout
+                      variants={item}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        tokenClicked(s);
+                      }}
                     >
-                      {s.label}
-                    </Box>
-                  </motion.li>
-                );
-              })}
-          </AnimatePresence>
-              </motion.div>
+                      <Box
+                        key={s.value}
+                        display="flex"
+                        mr="0.4rem"
+                        alignItems="center"
+                      >
+                        {s.label}
+                      </Box>
+                    </motion.li>
+                  );
+                })}
+            </AnimatePresence>
+          </motion.div>
         </ul>
       </DropdownButton>
       <Dropdown>
@@ -96,7 +115,7 @@ export const FormSelectPrimary = ({
           <DropdownListItem
             key={option.value}
             onClick={() => {
-              console.log(option)
+              console.log(option);
               setCollapsed(true);
               optionClicked(option);
             }}

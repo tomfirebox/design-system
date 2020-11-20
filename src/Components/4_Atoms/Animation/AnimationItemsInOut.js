@@ -1,26 +1,55 @@
 import React from "react";
-import {
-  useTrail,
-  animated,
-  config,
-  interpolate,
-  useSpring,
-  useTransition,
-  useChain,
-} from "react-spring";
-export const AnimationItemsInOut = ({ children, style }) => {
-  const arr = React.Children.toArray(children);
-  const transitions = useTransition(arr, (item) => item.key, {
-    from: { transform: "translate3d(-20px,0,0)", opacity: 0 },
-    enter: { transform: "translate3d(0,0,0)", opacity: 1, width: "100px" },
-    leave: { transform: "translate3d(-20px,0,0)", opacity: 0},
-    trail: 400,
-    config: config.gentle,
-  });
+import { Box } from "../../";
+import { motion, AnimatePresence } from "framer-motion";
 
-  return transitions.map(({ item, props, key }) => (
-    <animated.div key={key} style={{ ...props, ...style }}>
-      {item}
-    </animated.div>
-  ));
+const container = {
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0.1,
+    transition: { duration: 0.2 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 10, scale: 0.3 },
+  show: { opacity: 1, y: 0, scale: 1 },
+};
+
+export const AnimationItemsInOut = ({ children, ...props }) => {
+  const items = React.Children.toArray(children);
+
+  return (
+    <motion.div
+      style={{ display: "flex" }}
+      initial="hidden"
+      animate="show"
+      exit="hidden"
+      variants={container}
+    >
+      <AnimatePresence initial={true}>
+        {items.length &&
+          items.map((s, i, arr) => {
+            return (
+              <motion.li key={i} layout variants={item}>
+                <Box
+                  display="flex"
+                  mr="0.4rem"
+                  alignItems="center"
+                >
+                  {s}
+                  {/* {s.label} */}
+                </Box>
+              </motion.li>
+            );
+          })}
+      </AnimatePresence>
+    </motion.div>
+  );
 };
