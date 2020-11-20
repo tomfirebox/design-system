@@ -18,13 +18,13 @@ export const App = () => {
     },
     {
       label: <BadgePrimary>Badge Primary 2 - this is something</BadgePrimary>,
-      selected: true,
+      selected: false,
       value: "test value2",
     },
     {
       label: <BadgePrimary>Badge Primary 3</BadgePrimary>,
       listLabel: <Box bg="red"></Box>,
-      selected: true,
+      selected: false,
       value: "AHEY value",
     },
   ]);

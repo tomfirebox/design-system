@@ -1,27 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, AnimationDropdown, FormInputPrimary, AnimationItemsInOut } from "../../";
 import css from "@styled-system/css";
-import { motion, AnimatePresence } from "framer-motion";
-
-const container = {
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    scale: 0.1,
-    transition: { duration: 0.2 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 10, scale: 0.3 },
-  show: { opacity: 1, y: 0, scale: 1 },
-};
+import { motion } from "framer-motion";
 
 export const FormSelectPrimary = ({
   options,
@@ -60,54 +40,17 @@ export const FormSelectPrimary = ({
             position: selected.length ? "relative" : "absolute",
           }}
         >
-          {/* <AnimationItemsInOut>
+          <AnimationItemsInOut>
           {selected.length &&
-                selected.map((s, i, arr) => {
-                  return (
-                   
-                      <Box
-                        display="flex"
-                        mr="0.4rem"
-                        alignItems="center"
-                      >
-                        {s.label}
-                      </Box>
-                  );
-                })}
-          </AnimationItemsInOut> */}
-          <motion.div
-            style={{ display: "flex" }}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            variants={container}
-          >
-            <AnimatePresence initial={true}>
-              {selected.length &&
-                selected.map((s, i, arr) => {
-                  return (
-                    <motion.li
-                      key={s.value}
-                      layout
-                      variants={item}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        tokenClicked(s);
-                      }}
-                    >
-                      <Box
-                        key={s.value}
-                        display="flex"
-                        mr="0.4rem"
-                        alignItems="center"
-                      >
-                        {s.label}
-                      </Box>
-                    </motion.li>
-                  );
-                })}
-            </AnimatePresence>
-          </motion.div>
+                selected.map((s, i, arr) => <Box
+                  key={s.value}
+                  display="flex"
+                  mr="0.4rem"
+                  alignItems="center"
+                  onClick={() => tokenClicked(s)}
+                >{s.label}</Box>
+                )}
+          </AnimationItemsInOut>
         </ul>
       </DropdownButton>
       <Dropdown>
@@ -115,7 +58,6 @@ export const FormSelectPrimary = ({
           <DropdownListItem
             key={option.value}
             onClick={() => {
-              console.log(option);
               setCollapsed(true);
               optionClicked(option);
             }}

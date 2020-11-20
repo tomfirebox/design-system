@@ -1,5 +1,4 @@
 import React from "react";
-import { Box } from "../../";
 import { motion, AnimatePresence } from "framer-motion";
 
 const container = {
@@ -22,34 +21,27 @@ const item = {
   show: { opacity: 1, y: 0, scale: 1 },
 };
 
-export const AnimationItemsInOut = ({ children, ...props }) => {
-  const items = React.Children.toArray(children);
-
-  return (
+export const AnimationItemsInOut = ({ children, ...props }) => 
     <motion.div
-      style={{ display: "flex" }}
-      initial="hidden"
-      animate="show"
-      exit="hidden"
-      variants={container}
-    >
-      <AnimatePresence initial={true}>
-        {items.length &&
-          items.map((s, i, arr) => {
-            return (
-              <motion.li key={i} layout variants={item}>
-                <Box
-                  display="flex"
-                  mr="0.4rem"
-                  alignItems="center"
-                >
-                  {s}
-                  {/* {s.label} */}
-                </Box>
-              </motion.li>
-            );
-          })}
-      </AnimatePresence>
-    </motion.div>
-  );
-};
+    style={{ display: "flex" }}
+    initial="hidden"
+    animate="show"
+    exit="hidden"
+    variants={container}
+  >
+    <AnimatePresence initial={true}>
+      {children.length &&
+        children.map(s => {
+          return (
+            <motion.div
+              key={s.key}
+              layout
+              variants={item}
+            >
+                {s} 
+            </motion.div>
+          );
+        })}
+    </AnimatePresence>
+  </motion.div>
+  
