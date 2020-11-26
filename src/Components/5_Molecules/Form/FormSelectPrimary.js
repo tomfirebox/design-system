@@ -42,7 +42,7 @@ export const FormSelectPrimary = ({
         >
           <AnimationItemsInOut>
           {selected.length &&
-                selected.map((s, i, arr) => <Box
+                selected.map(s => <Box
                   key={s.value}
                   display="flex"
                   mr="0.4rem"

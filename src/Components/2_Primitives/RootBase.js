@@ -23,7 +23,7 @@ export const RootBase = ({ children }) => (
         html: {
           fontFamily: "primary",
           fontWeight: "primary.regular",
-          color:"primary.19"
+          color:"black"
         },
       })}
     />

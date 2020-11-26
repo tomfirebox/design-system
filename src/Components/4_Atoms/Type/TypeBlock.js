@@ -3,6 +3,7 @@ import css from "@styled-system/css";
 
 export const TypeBlock = styled.div(
   css({
+    "*:last-child": { mb: 0 },
     lineHeight: "xl",
     fontSize: "1.1rem",
     h1: {

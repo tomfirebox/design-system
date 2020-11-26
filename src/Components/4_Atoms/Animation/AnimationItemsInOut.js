@@ -21,7 +21,7 @@ const item = {
   show: { opacity: 1, y: 0, scale: 1 },
 };
 
-export const AnimationItemsInOut = ({ children, ...props }) => 
+export const AnimationItemsInOut = ({ children }) => 
     <motion.div
     style={{ display: "flex" }}
     initial="hidden"
