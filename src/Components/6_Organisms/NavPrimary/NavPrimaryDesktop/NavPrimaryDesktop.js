@@ -1,13 +1,13 @@
 import React from "react";
-import { Box } from "../../";
+import { Box } from "../../..";
 import { NavPimaryTopDesktop } from "./NavPimaryTopDesktop";
 import { NavPrimaryBottomDesktop } from "./NavPrimaryBottomDesktop";
 import { NavPrimaryMiddleDesktop } from "./NavPrimaryMiddleDesktop";
 
-export const NavPrimaryDesktop = (props) => (
+export const NavPrimaryDesktop = ({ mainRoutes, topRoutes, ...props }) => (
   <Box {...props}>
-    <NavPimaryTopDesktop />
+    <NavPimaryTopDesktop routes={topRoutes} />
     <NavPrimaryMiddleDesktop />
-    <NavPrimaryBottomDesktop />
+    <NavPrimaryBottomDesktop routes={mainRoutes} />
   </Box>
 );

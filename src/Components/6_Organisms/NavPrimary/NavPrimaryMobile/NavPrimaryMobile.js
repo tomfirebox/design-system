@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box } from "../../";
+import { Box } from "../../..";
 import { NavPrimaryTopMobile } from "./NavPrimaryTopMobile";
 import { NavPrimaryMiddleMobile } from "./NavPrimaryMiddleMobile";
 import { NavPrimaryBottomMobile } from "./NavPrimaryBottomMobile";

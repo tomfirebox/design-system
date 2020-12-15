@@ -12,6 +12,7 @@ import {
   justifyContent,
   shadow,
   compose,
+  system,
 } from "styled-system";
 
 export const Button = styled.button(
@@ -43,5 +44,11 @@ export const Button = styled.button(
     shadow,
     position
   ),
+  system({
+    textTransform: true,
+    textDecoration: true,
+    boxDecorationBreak: true,
+    visibility: true,
+  }),
   ({ css }) => css
 );
