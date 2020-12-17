@@ -5,7 +5,10 @@ import {
   // BadgePrimary,
   // FormSelectPrimary,
   // FormInputPrimary,
+  VideoOverlay,
+  Box,
   Article,
+  Container,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -48,6 +51,11 @@ export const App = () => {
   // };
   return (
     <RootFront>
+      <Container py="2rem">
+        <Box width="800px" height="400px">
+          <VideoOverlay />
+        </Box>
+      </Container>
       {/* <Container py="3rem">
         <FormSelectPrimary
           optionClicked={toggleOption}

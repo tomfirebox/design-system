@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { color, layout, margin, typography } from "styled-system";
+import { color, layout, margin, system, typography } from "styled-system";
 
 export const Text = styled.span(
   {},
@@ -7,5 +7,9 @@ export const Text = styled.span(
   color,
   margin,
   typography,
+  system({
+    textTransform: true,
+    textDecoration: true,
+  }),
   ({ css }) => css
 );
