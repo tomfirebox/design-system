@@ -1,3 +1,4 @@
+import { useCycle } from "framer-motion";
 import React, { useState } from "react";
 import {
   // Box,
@@ -14,6 +15,8 @@ import {
 import { RootFront } from "./Components/2_Primitives/RootFront";
 
 export const App = () => {
+  const [isOpen, toggleOpen] = useCycle(true, false);
+  const [bg, setBg] = useState();
   // const [options, setOptions] = useState([
   //   {
   //     label: <BadgePrimary>Badge Primary 1 - this is something</BadgePrimary>,
@@ -52,8 +55,19 @@ export const App = () => {
   return (
     <RootFront>
       <Container py="2rem">
-        <Box width="800px" height="400px">
-          <VideoOverlay />
+        <button onClick={() => toggleOpen()}>Click</button>
+        <Box width="800px" height="450px">
+          <VideoOverlay
+            timerFinished={() => setBg("salmon")}
+            closeClicked={() => {
+              toggleOpen();
+              setBg();
+            }}
+            confirmClicked={() => {
+              setBg("salmon");
+            }}
+            {...{ isOpen, bg }}
+          />
         </Box>
       </Container>
       {/* <Container py="3rem">
