@@ -6,10 +6,13 @@ import {
   // BadgePrimary,
   // FormSelectPrimary,
   // FormInputPrimary,
+  LogoPrimaryAml,
   VideoOverlay,
   Box,
   Article,
   Container,
+  Guide,
+  LogoPrimaryLh,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -54,6 +57,9 @@ export const App = () => {
   // };
   return (
     <RootFront>
+      <LogoPrimaryAml height="50px" />
+      <LogoPrimaryLh height="50px" />
+      <Guide />
       {/* <Container py="2rem">
         <button onClick={() => toggleOpen()}>Click</button>
         <Box width="800px" height="450px">

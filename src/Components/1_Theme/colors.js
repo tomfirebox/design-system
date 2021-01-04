@@ -9,4 +9,8 @@ export const colors = {
     primary: "#573a86",
     accent: "#5ab578",
   },
+  aml: {
+    primary: "#2d292b",
+    accent: "#ff667d",
+  },
 };
