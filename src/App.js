@@ -1,17 +1,17 @@
-import { useCycle } from "framer-motion";
-import React, { useState } from "react";
+// import { useCycle } from "framer-motion";
+import React from "react";
 import {
   // Box,
   // Container,
   // BadgePrimary,
   // FormSelectPrimary,
   // FormInputPrimary,
+  // Container,
+  // VideoOverlay,
   LogoPrimaryAml,
   LogoPrimaryMm,
-  VideoOverlay,
   Box,
   Article,
-  Container,
   Guide,
   LogoPrimaryLh,
   LogoMarkAml,
@@ -26,8 +26,8 @@ import {
 import { RootFront } from "./Components/2_Primitives/RootFront";
 
 export const App = () => {
-  const [isOpen, toggleOpen] = useCycle(true, false);
-  const [bg, setBg] = useState();
+  // const [isOpen, toggleOpen] = useCycle(true, false);
+  // const [bg, setBg] = useState();
   // const [options, setOptions] = useState([
   //   {
   //     label: <BadgePrimary>Badge Primary 1 - this is something</BadgePrimary>,

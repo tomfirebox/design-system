@@ -38,7 +38,7 @@ export const TimerCircle = ({
     const percent = (counter / limit) * 100;
     const corrected = percent < 100 ? percent : 100;
     setPercent(corrected);
-  }, [counter]);
+  }, [counter, limit]);
 
   useEffect(() => {
     if (percent === 100) {
@@ -47,7 +47,7 @@ export const TimerCircle = ({
         timerFinished && timerFinished();
       }, refreshRate);
     }
-  }, [percent]);
+  }, [percent, timerFinished]);
 
   return (
     <Button
