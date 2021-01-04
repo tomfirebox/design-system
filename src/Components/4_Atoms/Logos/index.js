@@ -7,3 +7,5 @@ export { LogoPrimaryMds } from "./LogoPrimaryMds";
 export { LogoPrimaryGvhd } from "./LogoPrimaryGvhd";
 export { LogoMark } from "./LogoMark";
 export { LogoMarkGvhd } from "./LogoMarkGvhd";
+export { LogoPrimaryMm } from "./LogoPrimaryMm";
+export { LogoMarkMm } from "./LogoMarkMm";

@@ -7,6 +7,7 @@ import {
   // FormSelectPrimary,
   // FormInputPrimary,
   LogoPrimaryAml,
+  LogoPrimaryMm,
   VideoOverlay,
   Box,
   Article,
@@ -17,6 +18,7 @@ import {
   LogoMarkLh,
   LogoMarkGvhd,
   LogoPrimaryGvhd,
+  LogoMarkMm,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -61,17 +63,21 @@ export const App = () => {
   // };
   return (
     <RootFront>
-      <Box display="flex">
-        <LogoMarkAml height="50px" mr="1rem" />
-        <LogoPrimaryAml height="50px" mr="1rem" />
+      <Box display="flex" height="30px">
+        <LogoMarkAml mr="1rem" height="100%" />
+        <LogoPrimaryAml mr="1rem" height="100%" />
       </Box>
-      <Box display="flex" mt="1rem">
-        <LogoMarkLh height="50px" mr="1rem" />
-        <LogoPrimaryLh height="50px" mr="1rem" />
+      <Box display="flex" height="30px" mt="1rem">
+        <LogoMarkLh mr="1rem" height="100%" />
+        <LogoPrimaryLh mr="1rem" height="100%" />
       </Box>
-      <Box display="flex" mt="1rem">
-        <LogoMarkGvhd height="50px" mr="1rem" />
-        <LogoPrimaryGvhd height="50px" mr="1rem" />
+      <Box display="flex" height="30px" mt="1rem">
+        <LogoMarkGvhd mr="1rem" height="100%" />
+        <LogoPrimaryGvhd mr="1rem" height="100%" />
+      </Box>
+      <Box display="flex" height="30px" mt="1rem">
+        <LogoMarkMm mr="1rem" height="100%" />
+        <LogoPrimaryMm mr="1rem" height="100%" />
       </Box>
       <Guide />
       {/* <Container py="2rem">
