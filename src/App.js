@@ -24,6 +24,9 @@ import {
   LogoMarkMpn,
   config,
   HubMarkSelector,
+  Container,
+  LogoPrimary,
+  LogoMark,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -68,17 +71,33 @@ export const App = () => {
   // };
   return (
     <RootFront>
-      <HubLogoSelector height="100px" hub={config.hub.code} />
+      <Box
+        display="flex"
+        borderTop="solid 1px"
+        borderBottom="solid 1px"
+        borderColor="gray.2"
+        py="1.5rem"
+      >
+        <Container>
+          <Box display="flex">
+            <LogoMark mr="3rem" height="60px" />
+            <LogoPrimary height="60px" />
+          </Box>
+        </Container>
+      </Box>
       {config.sisterhubs.map((hub) => (
         <Box
-          display="flex"
           borderTop="solid 1px"
           borderBottom="solid 1px"
           borderColor="gray.2"
           py="1.5rem"
         >
-          <HubLogoSelector height="40px" mr="2rem" {...hub} />
-          <HubMarkSelector height="40px" {...hub} />
+          <Container>
+            <Box display="flex">
+              <HubMarkSelector height="40px" mr="2rem" {...hub} />
+              <HubLogoSelector height="40px" {...hub} />
+            </Box>
+          </Container>
         </Box>
       ))}
       <Guide />
