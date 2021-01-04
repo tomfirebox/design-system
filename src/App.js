@@ -13,6 +13,10 @@ import {
   Container,
   Guide,
   LogoPrimaryLh,
+  LogoMarkAml,
+  LogoMarkLh,
+  LogoMarkGvhd,
+  LogoPrimaryGvhd,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -57,8 +61,18 @@ export const App = () => {
   // };
   return (
     <RootFront>
-      <LogoPrimaryAml height="50px" />
-      <LogoPrimaryLh height="50px" />
+      <Box display="flex">
+        <LogoMarkAml height="50px" mr="1rem" />
+        <LogoPrimaryAml height="50px" mr="1rem" />
+      </Box>
+      <Box display="flex" mt="1rem">
+        <LogoMarkLh height="50px" mr="1rem" />
+        <LogoPrimaryLh height="50px" mr="1rem" />
+      </Box>
+      <Box display="flex" mt="1rem">
+        <LogoMarkGvhd height="50px" mr="1rem" />
+        <LogoPrimaryGvhd height="50px" mr="1rem" />
+      </Box>
       <Guide />
       {/* <Container py="2rem">
         <button onClick={() => toggleOpen()}>Click</button>

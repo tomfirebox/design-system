@@ -13,4 +13,8 @@ export const colors = {
     primary: "#2d292b",
     accent: "#ff667d",
   },
+  gvhd: {
+    primary: "#2b2b57",
+    accent: "#3cabf2",
+  },
 };
