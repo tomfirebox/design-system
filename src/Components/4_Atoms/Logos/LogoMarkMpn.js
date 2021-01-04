@@ -42,17 +42,12 @@ export const LogoMarkMpn = ({ reverse, ...props }) => {
             height="39"
             id="mask-2_1_"
           >
-            <g class="st0">
-              <polygon
-                id="path-1_1_"
-                class="st1"
-                points="0,0 39,0 39,39 0,39 				"
-              />
+            <g>
+              <polygon id="path-1_1_" points="0,0 39,0 39,39 0,39 				" />
             </g>
           </mask>
           <path
             id="Fill-1_1_"
-            class="st2"
             fill={accent}
             d="M31.2,31.2c-1.5,1.5-3.3,2.7-5.2,3.5c-0.9-2.4-0.4-5.2,1.5-7.2c1.3-1.3,3-2,4.8-2
 			c0.8,0,1.6,0.2,2.4,0.5C33.8,27.9,32.7,29.6,31.2,31.2 M15.8,35.6c0.8-2.3,0.8-4.9-0.2-7.1c1.2,0.5,2.5,0.8,3.8,0.8

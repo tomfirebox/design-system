@@ -42,10 +42,9 @@ export const LogoMarkMm = ({ reverse, ...props }) => {
             height="23.7"
             id="mask-2_1_"
           >
-            <g class="st2">
+            <g>
               <polygon
                 id="path-1_1_"
-                class="st3"
                 points="0.7,0 16.2,0 16.2,23.7 0.7,23.7 				"
               />
             </g>
