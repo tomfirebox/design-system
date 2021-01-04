@@ -19,6 +19,8 @@ import {
   LogoMarkGvhd,
   LogoPrimaryGvhd,
   LogoMarkMm,
+  LogoPrimaryMpn,
+  LogoMarkMpn,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -78,6 +80,10 @@ export const App = () => {
       <Box display="flex" height="30px" mt="1rem">
         <LogoMarkMm mr="1rem" height="100%" />
         <LogoPrimaryMm mr="1rem" height="100%" />
+      </Box>
+      <Box display="flex" height="30px" mt="1rem">
+        <LogoMarkMpn mr="1rem" height="100%" />
+        <LogoPrimaryMpn mr="1rem" height="100%" />
       </Box>
       <Guide />
       {/* <Container py="2rem">

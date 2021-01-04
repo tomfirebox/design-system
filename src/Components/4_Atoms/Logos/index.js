@@ -9,3 +9,5 @@ export { LogoMark } from "./LogoMark";
 export { LogoMarkGvhd } from "./LogoMarkGvhd";
 export { LogoPrimaryMm } from "./LogoPrimaryMm";
 export { LogoMarkMm } from "./LogoMarkMm";
+export { LogoPrimaryMpn } from "./LogoPrimaryMpn";
+export { LogoMarkMpn } from "./LogoMarkMpn";

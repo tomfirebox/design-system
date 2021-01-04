@@ -21,4 +21,8 @@ export const colors = {
     primary: "#342f70",
     accent: "#d694f2",
   },
+  mpn: {
+    primary: "#1f3252",
+    accent: "#ffb554",
+  },
 };
