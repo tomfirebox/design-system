@@ -54,7 +54,7 @@ export const App = () => {
   // };
   return (
     <RootFront>
-      <Container py="2rem">
+      {/* <Container py="2rem">
         <button onClick={() => toggleOpen()}>Click</button>
         <Box width="800px" height="450px">
           <VideoOverlay
@@ -69,7 +69,7 @@ export const App = () => {
             {...{ isOpen, bg }}
           />
         </Box>
-      </Container>
+      </Container> */}
       {/* <Container py="3rem">
         <FormSelectPrimary
           optionClicked={toggleOption}
