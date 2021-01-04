@@ -20,7 +20,10 @@ import {
   LogoPrimaryGvhd,
   LogoMarkMm,
   LogoPrimaryMpn,
+  HubLogoSelector,
   LogoMarkMpn,
+  config,
+  HubMarkSelector,
 } from "./Components/";
 
 import { RootFront } from "./Components/2_Primitives/RootFront";
@@ -65,26 +68,19 @@ export const App = () => {
   // };
   return (
     <RootFront>
-      <Box display="flex" height="30px">
-        <LogoMarkAml mr="1rem" height="100%" />
-        <LogoPrimaryAml mr="1rem" height="100%" />
-      </Box>
-      <Box display="flex" height="30px" mt="1rem">
-        <LogoMarkLh mr="1rem" height="100%" />
-        <LogoPrimaryLh mr="1rem" height="100%" />
-      </Box>
-      <Box display="flex" height="30px" mt="1rem">
-        <LogoMarkGvhd mr="1rem" height="100%" />
-        <LogoPrimaryGvhd mr="1rem" height="100%" />
-      </Box>
-      <Box display="flex" height="30px" mt="1rem">
-        <LogoMarkMm mr="1rem" height="100%" />
-        <LogoPrimaryMm mr="1rem" height="100%" />
-      </Box>
-      <Box display="flex" height="30px" mt="1rem">
-        <LogoMarkMpn mr="1rem" height="100%" />
-        <LogoPrimaryMpn mr="1rem" height="100%" />
-      </Box>
+      <HubLogoSelector height="100px" hub={config.hub.code} />
+      {config.sisterhubs.map((hub) => (
+        <Box
+          display="flex"
+          borderTop="solid 1px"
+          borderBottom="solid 1px"
+          borderColor="gray.2"
+          py="1.5rem"
+        >
+          <HubLogoSelector height="40px" mr="2rem" {...hub} />
+          <HubMarkSelector height="40px" {...hub} />
+        </Box>
+      ))}
       <Guide />
       {/* <Container py="2rem">
         <button onClick={() => toggleOpen()}>Click</button>
