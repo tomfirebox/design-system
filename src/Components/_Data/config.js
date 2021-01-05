@@ -20,5 +20,9 @@ export const config = {
       code: "mm",
       name: "MM Hub",
     },
+    {
+      code: "mds",
+      name: "MDS Hub",
+    },
   ],
 };

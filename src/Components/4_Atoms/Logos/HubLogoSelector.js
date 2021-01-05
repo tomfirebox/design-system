@@ -4,6 +4,7 @@ import { LogoPrimaryAml } from "./LogoPrimaryAml";
 import { LogoPrimaryLh } from "./LogoPrimaryLh";
 import { LogoPrimaryGvhd } from "./LogoPrimaryGvhd";
 import { LogoPrimaryMm } from "./LogoPrimaryMm";
+import { LogoPrimaryMds } from "./LogoPrimaryMds";
 
 export const HubLogoSelector = ({ code, ...props }) => {
   const OPTIONS = {
@@ -12,6 +13,7 @@ export const HubLogoSelector = ({ code, ...props }) => {
     aml: LogoPrimaryAml,
     gvhd: LogoPrimaryGvhd,
     mm: LogoPrimaryMm,
+    mds: LogoPrimaryMds,
   };
 
   const Comp = OPTIONS[code] || OPTIONS.lh;

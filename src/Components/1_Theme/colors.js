@@ -25,4 +25,8 @@ export const colors = {
     primary: "#1f3252",
     accent: "#ffb554",
   },
+  mds: {
+    primary: "#44184e",
+    accent: "#d94044",
+  },
 };
