@@ -1,10 +1,10 @@
 import { swatchGenerator } from "../";
 
 export const colors = {
-  primary: swatchGenerator("#573a86", 20, 11, 0.15),
-  secondary: swatchGenerator("red", 20, 11, 0.03),
-  accent: swatchGenerator("#5ab578", 20, 11, 0),
-  gray: swatchGenerator("gray", 20, 11, 0.025),
+  primary: swatchGenerator("#573a86", 20, 0.15),
+  secondary: swatchGenerator("red", 20, 0.03),
+  accent: swatchGenerator("#5ab578", 20, 0),
+  gray: swatchGenerator("#eee", 20, -0.4),
   lh: {
     primary: "#573a86",
     accent: "#5ab578",

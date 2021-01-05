@@ -3,14 +3,17 @@ import { lighten } from "polished";
 export const swatchGenerator = (
   hex,
   amount = 20,
-  base = Math.floor(amount / 2),
+  // base = Math.floor(amount / 2),
   adjustment = 0
 ) => {
   let newcolors = {
-    base: lighten(
-      0.5 - ((1 / amount) * base + 1 / amount),
-      lighten(adjustment, hex)
-    ),
+    base: hex,
+    // typeof base === "string"
+    //   ? base
+    //   : lighten(
+    //       0.5 - ((1 / amount) * base + 1 / amount),
+    //       lighten(adjustment, hex)
+    //     ),
   };
 
   for (let i = 0; i < amount; i++) {
