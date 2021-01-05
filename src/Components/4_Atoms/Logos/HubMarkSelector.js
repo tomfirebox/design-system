@@ -5,6 +5,7 @@ import { LogoMarkAml } from "./LogoMarkAml";
 import { LogoMarkGvhd } from "./LogoMarkGvhd";
 import { LogoMarkMm } from "./LogoMarkMm";
 import { LogoMarkMds } from "./LogoMarkMds";
+import { LogoMarkAll } from "./LogoMarkAll";
 
 export const HubMarkSelector = ({ code, ...props }) => {
   const OPTIONS = {
@@ -13,7 +14,8 @@ export const HubMarkSelector = ({ code, ...props }) => {
     aml: LogoMarkAml,
     gvhd: LogoMarkGvhd,
     mm: LogoMarkMm,
-    mds: LogoMarkMds
+    mds: LogoMarkMds,
+    all: LogoMarkAll,
   };
 
   const Comp = OPTIONS[code] || OPTIONS.lh;

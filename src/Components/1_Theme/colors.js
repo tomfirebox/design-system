@@ -29,4 +29,8 @@ export const colors = {
     primary: "#44184e",
     accent: "#d94044",
   },
+  all: {
+    primary: "#492462",
+    accent: "#00adba",
+  },
 };

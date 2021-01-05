@@ -16,6 +16,9 @@ export { LogoMarkMpn } from "./LogoMarkMpn";
 export { LogoPrimaryMds } from "./LogoPrimaryMds";
 export { LogoMarkMds } from "./LogoMarkMds";
 
+export { LogoPrimaryAll } from "./LogoPrimaryAll";
+export { LogoMarkAll } from "./LogoMarkAll";
+
 export { LogoPrimary } from "./LogoPrimary";
 export { LogoMark } from "./LogoMark";
 export { HubLogoSelector } from "./HubLogoSelector";

@@ -24,5 +24,9 @@ export const config = {
       code: "mds",
       name: "MDS Hub",
     },
+    {
+      code: "all",
+      name: "ALL Hub",
+    },
   ],
 };
