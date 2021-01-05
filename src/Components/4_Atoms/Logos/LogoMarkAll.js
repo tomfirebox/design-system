@@ -4,7 +4,6 @@ import { Box } from "../../";
 
 export const LogoMarkAll = ({ reverse, ...props }) => {
   const { colors } = useTheme();
-  const primary = reverse ? "white" : colors.all.primary;
   const accent = reverse ? "white" : colors.all.accent;
   return (
     <Box

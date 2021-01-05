@@ -8,20 +8,10 @@ import {
   // FormInputPrimary,
   // Container,
   // VideoOverlay,
-  LogoPrimaryAml,
-  LogoPrimaryMm,
   Box,
   Article,
   Guide,
-  LogoPrimaryLh,
-  LogoMarkAml,
-  LogoMarkLh,
-  LogoMarkGvhd,
-  LogoPrimaryGvhd,
-  LogoMarkMm,
-  LogoPrimaryMpn,
   HubLogoSelector,
-  LogoMarkMpn,
   config,
   HubMarkSelector,
   Container,
@@ -89,6 +79,7 @@ export const App = () => {
         .sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0))
         .map((hub) => (
           <Box
+            key={hub.code}
             borderTop="solid 1px"
             borderBottom="solid 1px"
             borderColor="gray.2"
