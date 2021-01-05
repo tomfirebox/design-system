@@ -16,15 +16,14 @@ export const Colors = () => {
       <Trafalgar>Colors</Trafalgar>
       <Box display="flex" flexWrap="wrap">
         {Object.keys(colors).map((key) => (
-          <Box flexGrow="1" flexShrink="0" py="1rem">
-            <Minion textTransform="uppercase" mb="1rem">
+          <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
+            <Minion textTransform="uppercase" mb="0.5rem">
               {key}
             </Minion>
-            <Box display="flex">
+            <Box display="flex" flexWrap="wrap">
               {Object.keys(colors[key]).map((innerkey) => (
                 <Swatch
-                  //   width={{ _: "4.6%" }}
-                  mb="1rem"
+                  width={{ _: "4.7%" }}
                   name={innerkey}
                   value={colors[key][innerkey]}
                 />
@@ -41,6 +40,7 @@ export const Colors = () => {
 
 const Swatch = ({ name, value, ...props }) => (
   <Button
+    as="div"
     flexGrow="1"
     textAlign="left"
     p="0"
@@ -49,25 +49,25 @@ const Swatch = ({ name, value, ...props }) => (
   >
     <Box>
       <Box
-        px="1.2rem"
-        height="10rem"
+        // px="0.3rem"
+        height="5rem"
         bg={value}
         display="flex"
         alignItems="center"
         justifyContent="center"
       >
-        {(Number.isInteger(parseInt(name)) || name === "base") && (
-          <Box
-            size="1.5rem"
-            bg="white"
-            borderRadius="100%"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Minion>{name === "base" ? "B" : name}</Minion>
-          </Box>
-        )}
+        <Box
+          height="1.5rem"
+          minWidth="1.5rem"
+          bg="white"
+          borderRadius="1.5rem"
+          px='0.5rem'
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Minion>{name === "base" ? "B" : name}</Minion>
+        </Box>
       </Box>
     </Box>
   </Button>

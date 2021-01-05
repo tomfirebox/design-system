@@ -7,7 +7,7 @@ export const breakpoints = [
   "1450px",
 ];
 export const containerPoints = [
-  "340px",
+  "450px",
   "540px",
   "720px",
   "960px",
