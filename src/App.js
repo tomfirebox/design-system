@@ -85,21 +85,23 @@ export const App = () => {
           </Box>
         </Container>
       </Box>
-      {config.sisterhubs.map((hub) => (
-        <Box
-          borderTop="solid 1px"
-          borderBottom="solid 1px"
-          borderColor="gray.2"
-          py="1.5rem"
-        >
-          <Container>
-            <Box display="flex">
-              <HubMarkSelector height="40px" mr="2rem" {...hub} />
-              <HubLogoSelector height="40px" {...hub} />
-            </Box>
-          </Container>
-        </Box>
-      ))}
+      {config.sisterhubs
+        .sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0))
+        .map((hub) => (
+          <Box
+            borderTop="solid 1px"
+            borderBottom="solid 1px"
+            borderColor="gray.2"
+            py="1.5rem"
+          >
+            <Container>
+              <Box display="flex">
+                <HubMarkSelector height="40px" mr="2rem" {...hub} />
+                <HubLogoSelector height="40px" {...hub} />
+              </Box>
+            </Container>
+          </Box>
+        ))}
       <Guide />
       {/* <Container py="2rem">
         <button onClick={() => toggleOpen()}>Click</button>
