@@ -1,38 +1,45 @@
+import React, { useState } from "react";
 import { useTheme } from "emotion-theming";
-import React from "react";
 import {
   Container,
   Trafalgar,
   Box,
   Button,
-  copyTextToClipboard,
+  AnimationAccordion,
   Minion,
+  copyTextToClipboard,
+  AccordionPrimary,
 } from "../../";
 
 export const Colors = () => {
   const { colors } = useTheme();
+  const [open, setOpen] = useState();
   return (
     <Container>
-      <Trafalgar>Colors</Trafalgar>
-      <Box display="flex" flexWrap="wrap">
-        {Object.keys(colors).map((key) => (
-          <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
-            <Minion textTransform="uppercase" mb="0.5rem">
-              {key}
-            </Minion>
-            <Box display="flex" flexWrap="wrap">
-              {Object.keys(colors[key]).map((innerkey) => (
-                <Swatch
-                  width={{ _: "4.7%" }}
-                  name={innerkey}
-                  value={colors[key][innerkey]}
-                />
-              ))}
-              {/* {JSON.stringify(colors[key])} */}
+      <AccordionPrimary label="Colors">
+        <div>Content</div>
+      </AccordionPrimary>
+      {/* <AnimationAccordion {...{ open }}>
+        <Trafalgar onClick={() => setOpen(!open)}>Colors</Trafalgar>
+        <Box display="flex" flexWrap="wrap">
+          {Object.keys(colors).map((key) => (
+            <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
+              <Minion textTransform="uppercase" mb="0.5rem">
+                {key}
+              </Minion>
+              <Box display="flex" flexWrap="wrap">
+                {Object.keys(colors[key]).map((innerkey) => (
+                  <Swatch
+                    width={{ _: "4.7%" }}
+                    name={innerkey}
+                    value={colors[key][innerkey]}
+                  />
+                ))}
+              </Box>
             </Box>
-          </Box>
-        ))}
-      </Box>
+          ))}
+        </Box>
+      </AnimationAccordion> */}
       {/* {JSON.stringify(colors)} */}
     </Container>
   );
@@ -61,7 +68,7 @@ const Swatch = ({ name, value, ...props }) => (
           minWidth="1.5rem"
           bg="white"
           borderRadius="1.5rem"
-          px='0.5rem'
+          px="0.5rem"
           display="flex"
           alignItems="center"
           justifyContent="center"
