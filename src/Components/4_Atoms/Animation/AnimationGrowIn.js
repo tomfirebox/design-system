@@ -8,7 +8,7 @@ export const AnimationGrowIn = ({ delayIn = 0, delayOut = 0, ...props }) => {
       height: "auto",
       opacity: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.2,
         delay: delayIn,
       },
     },
@@ -17,7 +17,7 @@ export const AnimationGrowIn = ({ delayIn = 0, delayOut = 0, ...props }) => {
       opacity: 0,
       transition: {
         delay: delayOut,
-        duration: 0.4,
+        duration: 0.3,
       },
     },
   };

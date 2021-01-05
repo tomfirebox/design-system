@@ -9,6 +9,7 @@ export const Container = forwardRef(({ children, maxWidth, ...props }, ref) => {
       ref={ref}
       maxWidth={{ ...containerPoints, ...maxWidth }}
       width="100%"
+      textAlign='left'
       mx="auto"
       px="1rem"
       {...props}

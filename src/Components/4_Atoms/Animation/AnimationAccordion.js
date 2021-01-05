@@ -12,9 +12,9 @@ export const AnimationAccordion = ({ children, open, ...props }) => (
           initial={!open ? "animate" : "exit"}
           animate={open ? "animate" : "exit"}
           exit={!open ? "animate" : "exit"}
-          delayOut={0.2}
+          delayOut={0.1}
         >
-          <AnimationFadeIn key="accordion-inner" delayIn={0.4}>
+          <AnimationFadeIn key="accordion-inner" delayIn={0.3}>
             {children[1]}
           </AnimationFadeIn>
         </AnimationGrowIn>

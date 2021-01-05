@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { useTheme } from "emotion-theming";
 import {
   Container,
-  Trafalgar,
   Box,
   Button,
-  AnimationAccordion,
   Minion,
   copyTextToClipboard,
   AccordionPrimary,
@@ -13,35 +11,32 @@ import {
 
 export const Colors = () => {
   const { colors } = useTheme();
-  const [open, setOpen] = useState();
+  const [open, setOpen] = useState(true);
   return (
-    <Container>
-      <AccordionPrimary label="Colors">
-        <div>Content</div>
-      </AccordionPrimary>
-      {/* <AnimationAccordion {...{ open }}>
-        <Trafalgar onClick={() => setOpen(!open)}>Colors</Trafalgar>
-        <Box display="flex" flexWrap="wrap">
-          {Object.keys(colors).map((key) => (
-            <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
-              <Minion textTransform="uppercase" mb="0.5rem">
-                {key}
-              </Minion>
-              <Box display="flex" flexWrap="wrap">
-                {Object.keys(colors[key]).map((innerkey) => (
-                  <Swatch
-                    width={{ _: "4.7%" }}
-                    name={innerkey}
-                    value={colors[key][innerkey]}
-                  />
-                ))}
-              </Box>
+    <AccordionPrimary
+      label={<Container>Colours</Container>}
+      setOpen={() => setOpen(!open)}
+      {...{ open }}
+    >
+      <Container display="flex" flexWrap="wrap">
+        {Object.keys(colors).map((key) => (
+          <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
+            <Minion textTransform="uppercase" mb="0.5rem">
+              {key}
+            </Minion>
+            <Box display="flex" flexWrap="wrap">
+              {Object.keys(colors[key]).map((innerkey) => (
+                <Swatch
+                  width={{ _: "4.7%" }}
+                  name={innerkey}
+                  value={colors[key][innerkey]}
+                />
+              ))}
             </Box>
-          ))}
-        </Box>
-      </AnimationAccordion> */}
-      {/* {JSON.stringify(colors)} */}
-    </Container>
+          </Box>
+        ))}
+      </Container>
+    </AccordionPrimary>
   );
 };
 
