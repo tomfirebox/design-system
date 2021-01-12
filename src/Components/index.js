@@ -7,4 +7,5 @@ export * from "./4_Atoms";
 export * from "./5_Molecules";
 export * from "./6_Organisms";
 export * from "./7_Templates";
+export * from "./8_Entry";
 export { Guide } from "./10_Guide/Guide";

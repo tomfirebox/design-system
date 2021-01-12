@@ -1,16 +1,25 @@
+import css from "@styled-system/css";
 import React from "react";
 import { Button } from "../../../..";
 
-export const ButtonNavPrimaryTopDesktop = ({ last, ...props }) => (
+export const ButtonNavPrimaryTopDesktop = ({ last, active, ...props }) => (
   <Button
-    height="50px"
-    px="2rem"
-    fontSize="0.9rem"
+    height="40px"
+    px="1.5rem"
+    fontSize="0.8rem"
     letterSpacing="1px"
     borderRight={last && "solid 1px"}
     borderLeft="solid 1px"
-    borderColor="primary.10"
+    borderColor="rgba(255,255,255,0.1)"
     textTransform="uppercase"
+    display="flex"
+    alignItems="center"
+    textDecoration="none"
+    css={css({
+      transition: "background ease 0.2s",
+      "&:hover": { bg: "rgba(0,0,0,0.1)" },
+      "&.active": { bg: "rgba(0,0,0,0.2)" },
+    })}
     {...props}
   />
 );

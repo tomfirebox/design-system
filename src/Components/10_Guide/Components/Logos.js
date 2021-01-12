@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Container,
-  LogoMark,
-  LogoPrimary,
   config,
   HubLogoSelector,
   HubMarkSelector,
@@ -28,8 +26,8 @@ export const Logos = () => {
         >
           <Container>
             <Box display="flex">
-              <LogoMark mr="3rem" height="60px" />
-              <LogoPrimary height="60px" />
+              <HubMarkSelector mr="3rem" height="60px" />
+              <HubLogoSelector height="60px" />
             </Box>
           </Container>
         </Box>

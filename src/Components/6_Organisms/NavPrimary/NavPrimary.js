@@ -20,6 +20,9 @@ const mainRoutes = [
 export const NavPrimary = () => (
   <header>
     <NavPrimaryMobile display={{ md: "none" }} {...{ topRoutes, mainRoutes }} />
-    <NavPrimaryDesktop display={{ _: "none", md: "block" }} {...{ topRoutes, mainRoutes }} />
+    <NavPrimaryDesktop
+      display={{ _: "none", md: "block" }}
+      {...{ topRoutes, mainRoutes }}
+    />
   </header>
 );

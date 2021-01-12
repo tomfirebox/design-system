@@ -6,8 +6,9 @@ import { LogoMarkGvhd } from "./LogoMarkGvhd";
 import { LogoMarkMm } from "./LogoMarkMm";
 import { LogoMarkMds } from "./LogoMarkMds";
 import { LogoMarkAll } from "./LogoMarkAll";
+import { config } from "../../";
 
-export const HubMarkSelector = ({ code, ...props }) => {
+export const HubMarkSelector = ({ code = config.hub.code, ...props }) => {
   const OPTIONS = {
     lh: LogoMarkLh,
     mpn: LogoMarkMpn,

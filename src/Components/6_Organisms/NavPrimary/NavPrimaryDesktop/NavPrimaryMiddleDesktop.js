@@ -1,10 +1,13 @@
 import React from "react";
-import { Box, Container, LogoPrimary } from "../../../";
+import { Link } from "react-router-dom";
+import { Box, Container, HubLogoSelector } from "../../../";
 
 export const NavPrimaryMiddleDesktop = () => (
-  <Container py="2rem">
+  <Container py="1.5rem">
     <Box display="flex">
-      <LogoPrimary height="40px" mr="2rem" />
+      <Link to="/">
+        <HubLogoSelector height="35px" mr="2rem" />
+      </Link>
     </Box>
   </Container>
 );

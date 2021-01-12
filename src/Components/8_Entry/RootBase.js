@@ -1,11 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Global, css } from "@emotion/core";
 import { ThemeProvider } from "emotion-theming";
-import { theme } from "../";
+import { theme } from "..";
 import "reset-css";
 import { css as scss } from "@styled-system/css";
+import { routes } from "../";
 
-export const RootBase = ({ children }) => (
+export const RootBase = () => (
   <ThemeProvider theme={theme}>
     <Global
       styles={css`
@@ -14,19 +16,31 @@ export const RootBase = ({ children }) => (
     />
     <Global
       styles={scss({
-        "*":{
-          color: "inherit"
+        "*": {
+          color: "inherit",
         },
         strong: {
-          fontWeight: "primary.semibold"
+          fontWeight: "primary.semibold",
         },
         html: {
           fontFamily: "primary",
           fontWeight: "primary.regular",
-          color:"black"
+          color: "black",
         },
       })}
     />
-    {children}
+    <Router>
+      <Switch>
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            render={(props) => (
+              <route.component {...props} {...route} routes={route.routes} />
+            )}
+          />
+        ))}
+      </Switch>
+    </Router>
   </ThemeProvider>
 );

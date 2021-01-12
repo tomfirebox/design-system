@@ -20,13 +20,14 @@ export const Colors = () => {
     >
       <Container display="flex" flexWrap="wrap">
         {Object.keys(colors).map((key) => (
-          <Box flexGrow="1" flexShrink="1" py="1rem" width="100%">
+          <Box key={key} flexGrow="1" flexShrink="1" py="1rem" width="100%">
             <Minion textTransform="uppercase" mb="0.5rem">
               {key}
             </Minion>
             <Box display="flex" flexWrap="wrap">
               {Object.keys(colors[key]).map((innerkey) => (
                 <Swatch
+                  key={innerkey}
                   width={{ _: "4.7%" }}
                   name={innerkey}
                   value={colors[key][innerkey]}

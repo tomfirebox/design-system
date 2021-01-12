@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import isPropValid from "@emotion/is-prop-valid";
 import {
   color,
   space,
@@ -15,7 +16,9 @@ import {
   system,
 } from "styled-system";
 
-export const Button = styled.button(
+export const Button = styled("button", {
+  shouldForwardProp: (prop) => isPropValid(prop),
+})(
   {
     boxSizing: "border-box",
     border: "none",

@@ -1,6 +1,6 @@
 export const config = {
   hub: {
-    code: "lh",
+    code: "mpn",
     name: "Lymphoma Hub",
   },
   sisterhubs: [

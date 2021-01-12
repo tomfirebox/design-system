@@ -1,19 +1,18 @@
 // import { useCycle } from "framer-motion";
 import React from "react";
-import {
-  // Box,
-  // Container,
-  // BadgePrimary,
-  // FormSelectPrimary,
-  // FormInputPrimary,
-  // Container,
-  // VideoOverlay,
-  Article,
-  Guide,
-  // Box
-} from "./Components/";
+import // Box,
+// Container,
+// BadgePrimary,
+// FormSelectPrimary,
+// FormInputPrimary,
+// Container,
+// VideoOverlay,
+// Article,
+// Guide,
+// Box
+"./Components/";
 
-import { RootFront } from "./Components/2_Primitives/RootFront";
+import { RootBase } from "./Components/8_Entry/RootBase";
 
 export const App = () => {
   // const [isOpen, toggleOpen] = useCycle(true, false);
@@ -54,35 +53,35 @@ export const App = () => {
   //   });
   // };
   return (
-    <RootFront>
-      <Guide />
-      {/* <Container py="2rem">
-        <button onClick={() => toggleOpen()}>Click</button>
-        <Box width="800px" height="450px">
-          <VideoOverlay
-            timerFinished={() => setBg("salmon")}
-            closeClicked={() => {
-              toggleOpen();
-              setBg();
-            }}
-            confirmClicked={() => {
-              setBg("salmon");
-            }}
-            {...{ isOpen, bg }}
-          />
-        </Box>
-      </Container> */}
-      {/* <Container py="3rem">
-        <FormSelectPrimary
-          optionClicked={toggleOption}
-          tokenClicked={toggleOption}
-          sortSelectedFunction={sortRecentlyUpdated}
-          options={options}
-          mb='8rem'
-        />
-        <FormInputPrimary placeholder="This is the placeholder" mb="1rem" />
-      </Container> */}
-      <Article />
-    </RootFront>
+    <RootBase />
+    // {/* <Guide /> */}
+    //   {/* <Container py="2rem">
+    //     <button onClick={() => toggleOpen()}>Click</button>
+    //     <Box width="800px" height="450px">
+    //       <VideoOverlay
+    //         timerFinished={() => setBg("salmon")}
+    //         closeClicked={() => {
+    //           toggleOpen();
+    //           setBg();
+    //         }}
+    //         confirmClicked={() => {
+    //           setBg("salmon");
+    //         }}
+    //         {...{ isOpen, bg }}
+    //       />
+    //     </Box>
+    //   </Container> */}
+    //   {/* <Container py="3rem">
+    //     <FormSelectPrimary
+    //       optionClicked={toggleOption}
+    //       tokenClicked={toggleOption}
+    //       sortSelectedFunction={sortRecentlyUpdated}
+    //       options={options}
+    //       mb='8rem'
+    //     />
+    //     <FormInputPrimary placeholder="This is the placeholder" mb="1rem" />
+    //   </Container> */}
+    //   {/* <Article /> */}
+    // {/* </RootBase> */}
   );
 };

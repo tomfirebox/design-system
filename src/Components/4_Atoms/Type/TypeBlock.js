@@ -22,6 +22,10 @@ export const TypeBlock = styled.div(
     p: {
       mb: ["2rem"],
     },
+    a: {
+      color: "primary.base",
+      fontWeight: "primary.semibold",
+    },
     li: {
       mb: "1rem",
       position: "relative",

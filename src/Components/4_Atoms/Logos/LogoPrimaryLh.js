@@ -5,7 +5,7 @@ import { Box } from "../../";
 export const LogoPrimaryLh = ({ reverse, ...props }) => {
   const { colors } = useTheme();
   const primary = reverse ? "white" : colors.lh.primary;
-  const accent = reverse ? "white" : colors.lh.accent;
+  const accent = colors.lh.accent;
   return (
     <Box
       as="svg"

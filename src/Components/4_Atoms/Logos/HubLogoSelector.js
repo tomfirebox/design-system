@@ -6,8 +6,9 @@ import { LogoPrimaryGvhd } from "./LogoPrimaryGvhd";
 import { LogoPrimaryMm } from "./LogoPrimaryMm";
 import { LogoPrimaryMds } from "./LogoPrimaryMds";
 import { LogoPrimaryAll } from "./LogoPrimaryAll";
+import { config } from "../../";
 
-export const HubLogoSelector = ({ code, ...props }) => {
+export const HubLogoSelector = ({ code = config.hub.code, ...props }) => {
   const OPTIONS = {
     lh: LogoPrimaryLh,
     mpn: LogoPrimaryMpn,
