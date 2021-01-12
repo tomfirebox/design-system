@@ -33,8 +33,9 @@ const baseColors = {
   },
   mds: {
     // real mds color
-    // primary: "#44184e",
-    primary: "#34495E",
+    primary: "#44184e",
+    // fake mds color
+    // primary: "#34495E",
     secondary: "#342351",
     accent: "#d94044",
     gray: "#1e1d21",
@@ -80,8 +81,9 @@ const hubcolors = {
   },
   mds: {
     // real mds color
-    // primary: swatchGenerator(baseColors.mds.primary, 40, 0.3),
-    primary: swatchGenerator(baseColors.mds.primary, 40, 0.2),
+    primary: swatchGenerator(baseColors.mds.primary, 40, 0.3),
+    // fake mds color
+    // primary: swatchGenerator(baseColors.mds.primary, 40, 0.2),
     secondary: swatchGenerator(baseColors.mds.secondary, 40, 0.28),
     accent: swatchGenerator(baseColors.mds.accent, 40, -0.05),
     gray: swatchGenerator(baseColors.mds.gray, 40, 0.38),

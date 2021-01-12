@@ -23,7 +23,7 @@ export const NavPrimaryTopMobile = () => {
         </Box>
         <Box px="1rem">Nav</Box>
       </Box>
-      <Box bg="red" position="fixed" height="100vh" width="100vw"></Box>
+      <Box position="fixed" height="100vh" width="100vw"></Box>
     </>
   );
 };
