@@ -4,3 +4,4 @@ export { AnimationItemsInOut } from "./AnimationItemsInOut";
 export { AnimationAccordion } from "./AnimationAccordion";
 export { AnimationGrowIn } from "./AnimationGrowIn";
 export { AnimationLoaderFullPage } from "./AnimationLoaderFullPage";
+export { AnimationLoaderSpinner } from "./AnimationLoaderSpinner";

@@ -20,7 +20,7 @@ export const Homepage = () => {
 
   return (
     <AnimationLoaderFullPage {...{ loading }}>
-      {loading && 'loading...'}
+      {loading && "loading..."}
       {!loading && (
         <Container py="2rem">
           <FeaturedArticle {...homeVideoMainFeatured} />

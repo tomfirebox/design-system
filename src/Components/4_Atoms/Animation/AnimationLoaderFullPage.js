@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  // AnimatePresence
-} from "framer-motion";
-import { Box } from "../../";
-import css from "@styled-system/css";
-import { HubMarkSelector } from "../Logos";
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Box, AnimationLoaderSpinner } from "../../";
 
 export const AnimationLoaderFullPage = ({ children, loading = false }) => {
   const loaderVariants = {
@@ -14,27 +8,14 @@ export const AnimationLoaderFullPage = ({ children, loading = false }) => {
       pointerEvents: "all",
       opacity: 1,
     },
-    in: {
+    animate: {
       opacity: 0,
       pointerEvents: "none",
       transition: { duration: 0.4, delay: loading ? 0.6 : 0.3 },
     },
-    out: {
+    exit: {
       opacity: 1,
       transition: { duration: 0.1 },
-    },
-  };
-
-  const loaderinnerVariants = {
-    initial: {
-      opacity: 0,
-    },
-    in: {
-      opacity: 1,
-      transition: { delay: 0.1 },
-    },
-    out: {
-      opacity: 0,
     },
   };
 
@@ -49,29 +30,14 @@ export const AnimationLoaderFullPage = ({ children, loading = false }) => {
         as={motion.div}
         variants={loaderVariants}
         initial="initial"
-        animate={!loading && "in"}
-        exit="out"
+        animate={!loading && "animate"}
+        exit="exit"
         display="flex"
         alignItems="center"
         justifyContent="center"
       >
         <AnimatePresence>
-          {loading && (
-            <Box
-              as={motion.div}
-              variants={loaderinnerVariants}
-              animate="in"
-              exit="out"
-              size="6rem"
-            >
-              <motion.div
-                animate={{ rotate: 720 }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <HubMarkSelector />
-              </motion.div>
-            </Box>
-          )}
+          {loading && <AnimationLoaderSpinner delayIn={0.3}/>}
         </AnimatePresence>
       </Box>
       {children}
