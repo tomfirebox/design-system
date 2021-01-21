@@ -6,6 +6,7 @@ import { theme } from "..";
 import "reset-css";
 import { css as scss } from "@styled-system/css";
 import { routes } from "../";
+import { AnimatePresence } from "framer-motion";
 
 export const RootBase = () => (
   <ThemeProvider theme={theme}>
@@ -27,20 +28,25 @@ export const RootBase = () => (
           fontWeight: "primary.regular",
           color: "black",
         },
+        body: {
+          overflow: 'hidden'
+        }
       })}
     />
     <Router>
-      <Switch>
-        {routes.map((route) => (
-          <Route
-            key={route.path}
-            path={route.path}
-            render={(props) => (
-              <route.component {...props} {...route} routes={route.routes} />
-            )}
-          />
-        ))}
-      </Switch>
+      <AnimatePresence>
+        <Switch>
+          {routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              render={(props) => (
+                <route.component {...props} {...route} routes={route.routes} />
+              )}
+            />
+          ))}
+        </Switch>
+      </AnimatePresence>
     </Router>
   </ThemeProvider>
 );
