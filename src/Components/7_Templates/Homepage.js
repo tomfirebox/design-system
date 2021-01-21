@@ -4,8 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Container, homepageData, getImageUrl, Image, Box } from "../";
 import { AnimationLoaderFullPage } from "../4_Atoms";
 
-console.log(homepageData);
-
 export const Homepage = () => {
   const { homeVideoMainFeatured, homeQuoteText } = homepageData;
   const [loading, setLoading] = useState(true);
@@ -20,28 +18,15 @@ export const Homepage = () => {
     };
   }, []);
 
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      position: "absolute",
-    },
-    in: {
-      opacity: 1,
-      position: "absolute",
-    },
-    out: {
-      opacity: 0,
-    },
-  };
-
   return (
     <AnimationLoaderFullPage {...{ loading }}>
-        {!loading && (
-          <Container py="2rem">
-            <FeaturedArticle {...homeVideoMainFeatured} />
-            <p>{homeQuoteText}</p>
-          </Container>
-        )}
+      {loading && 'loading...'}
+      {!loading && (
+        <Container py="2rem">
+          <FeaturedArticle {...homeVideoMainFeatured} />
+          <p>{homeQuoteText}</p>
+        </Container>
+      )}
     </AnimationLoaderFullPage>
   );
 };

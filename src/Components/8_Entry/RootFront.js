@@ -8,9 +8,8 @@ export const RootFront = ({ children, path, routes = [] }) => {
   return (
     <>
       <NavPrimary />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          {console.log(location, 'location')}
           {routes.map((route, i) => (
             <Route
               key={i}
