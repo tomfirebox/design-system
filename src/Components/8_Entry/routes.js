@@ -1,23 +1,8 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Guide } from "../10_Guide/Guide";
 import { AnimationLoaderFullPage } from "../4_Atoms";
 import { Homepage, Author } from "../7_Templates";
 import { RootFront } from "./RootFront";
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    position: "absolute",
-  },
-  in: {
-    opacity: 1,
-    position: "absolute",
-  },
-  out: {
-    opacity: 0,
-  },
-};
 
 export const routes = [
   {
@@ -39,33 +24,25 @@ export const routes = [
       {
         path: "/steering-committee",
         component: () => (
-          <AnimationLoaderFullPage loading={false}>
-            steering-committee
-          </AnimationLoaderFullPage>
+          <AnimationLoaderFullPage>steering-committee</AnimationLoaderFullPage>
         ),
       },
       {
         path: "/about-us",
         component: () => (
-          <AnimationLoaderFullPage loading={false}>
-            About us
-          </AnimationLoaderFullPage>
+          <AnimationLoaderFullPage>About us</AnimationLoaderFullPage>
         ),
       },
       {
         path: "/newsletter",
         component: () => (
-          <AnimationLoaderFullPage loading={false}>
-            Newsletter
-          </AnimationLoaderFullPage>
+          <AnimationLoaderFullPage>Newsletter</AnimationLoaderFullPage>
         ),
       },
       {
         path: "/contact",
         component: () => (
-          <AnimationLoaderFullPage loading={false}>
-            Contact
-          </AnimationLoaderFullPage>
+          <AnimationLoaderFullPage>Contact</AnimationLoaderFullPage>
         ),
       },
       {

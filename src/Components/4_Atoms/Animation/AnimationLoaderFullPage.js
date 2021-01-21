@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Box, AnimationLoaderSpinner } from "../../";
 
-export const AnimationLoaderFullPage = ({ children, loading = false }) => {
+export const AnimationLoaderFullPage = ({ children, loading }) => {
   const loaderVariants = {
     initial: {
       pointerEvents: "all",
@@ -37,7 +37,7 @@ export const AnimationLoaderFullPage = ({ children, loading = false }) => {
         justifyContent="center"
       >
         <AnimatePresence>
-          {loading && <AnimationLoaderSpinner delayIn={0.3}/>}
+          {loading && <AnimationLoaderSpinner delayIn={0.3} />}
         </AnimatePresence>
       </Box>
       {children}

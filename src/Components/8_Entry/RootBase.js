@@ -28,9 +28,6 @@ export const RootBase = () => (
           fontWeight: "primary.regular",
           color: "black",
         },
-        body: {
-          overflow: 'hidden'
-        }
       })}
     />
     <Router>

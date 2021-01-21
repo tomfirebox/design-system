@@ -29,7 +29,7 @@ export const AnimationLoaderSpinner = ({ delayIn = 0.1, ...props }) => {
     >
       <motion.div
         animate={{ rotate: 720 }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ duration: 2.5, repeat: Infinity }}
       >
         <HubMarkSelector />
       </motion.div>
